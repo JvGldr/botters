@@ -1,4 +1,6 @@
 # botters
-Overzicht van de Botters van de Botterstichting Elburg
+Overzicht van de Vloot van de Botterstichting Elburg
 
-Per Botter de historie en enige kentallen 
+Per Schip "het verhaal" en de "gegevens 
+
+Voor het document zelf: https://jvgldr.github.io/botters

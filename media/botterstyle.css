@@ -27,7 +27,7 @@ img
 }
 
 /*-- Definite van het Geonovum Logo bovenaan Respec document ------------------------*/
-img#Geonovum
+img#TopLogo
 {
   width:132px;
   height: 67px;
@@ -61,27 +61,27 @@ table
 {
   empty-cells: show;
   min-width: 90%;
-  border-color: brown;
+  border-color: #990000;
   border-style: solid;
 }
 
 /*-- Definite van de kopregel van een tabel ----------------------------------------*/
 thead
 {
-  background-color: brown;
-  color: white;
+  background-color: #990000;
+  color:white;
 }
 /*-- Definite van de body van een tabel --------------------------------------------*/
 tbody
 {
-  border-color: brown;
+  border-color:#cc6600;
   background-color: lightgoldenrodyellow;
 }
 
 /*-- Definite van de tabel-rij (deze zorgt voor 2 kleuren in de rijen) -------------*/
 tr:nth-child(even) 
 {
-  background-color:  rosybrown;
+  background-color:  #cc9900;
 }
 
 /*-- Definite van de tabel-cel (data) ----------------------------------------------*/
@@ -105,7 +105,6 @@ r
   border-style: solid;
   background-color: rosybrown !important;
   color:white;
-  margin-right: 4.0em;
   padding: 0 2em;
   margin-top: 1.5em;
 }
@@ -115,3 +114,4 @@ r
   content: "Uit de memoires van Henk Hulst:";
   padding-right: 8px;
   color: darkmagenta; /* Or a color you prefer */
+}

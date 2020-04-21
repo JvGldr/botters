@@ -6,10 +6,13 @@ overzicht van de wetensweaadigheden van de schepen.
 
 Via de links in deze tabel kan snel naar de pagina van het betreffende schip worden gesprongen.
 
-| Visserijnummer  | Type                             |   
-|-----------------|----------------------------------|  
-| [EB 1 ](#eb-1)  | Botter                           |
-| [EB 15](#eb-15) | Botter                           |
-| [EB 17](#eb-17) | Botter                           |
-| [EB 24](#eb-24) | Botter                           |
-| [EB 29](#eb-29) | Botter                           |
+| Visserijnummer   | Type   | Verhaal                             | Gegevens                             |     
+|------------------|--------| ------------------------------------|--------------------------------------|    
+| [EB1 ](#de-eb1)  | Botter | [verhaal](#het-verhaal-van-de-eb1)  | [gegevens](#de-gegevens-van-de-eb1)  |   
+| [EB15](#de-eb15) | Botter | [verhaal](#het-verhaal-van-de-eb15) | [gegevens](#de-gegevens-van-de-eb15) |   
+| [EB17](#de-eb17) | Botter | [verhaal](#het-verhaal-van-de-eb17) | [gegevens](#de-gegevens-van-de-eb17) |    
+| [EB24](#de-eb24) | Botter | [verhaal](#het-verhaal-van-de-eb24) | [gegevens](#de-gegevens-van-de-eb24) |    
+| [EB29](#de-eb29) | Botter | [verhaal](#het-verhaal-van-de-eb29) | [gegevens](#de-gegevens-van-de-eb29) |    
+| [EB39](#de-eb39) | Bons   | [verhaal](#het-verhaal-van-de-eb39) | [gegevens](#de-gegevens-van-de-eb39) |    
+
+

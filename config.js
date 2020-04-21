@@ -10,26 +10,28 @@
 //-- Log . . . :  20181015 - JvG - Initiele versie 
 //-- Log . . . :  20191022 - GRK - Handreiking Archiveren ruimtelijke plannen v2.0      
 //-------------------------------------------------------------------------------------
+//-- Postprocessor voor ResPec
 
-//-- Postprocessors -------------------------------------------------------------------
-
-//-- haalt gh-pages weg aan het eind van een URL
-//-- Stopt zodra de eerste is gevonden (want komt maar 1x voor)
 //-- JvG 2019-11-12
-function custGHPG(respecConfig)  
+function respecPost(respecConfig)  
 {
-  var tags = document.getElementsByTagName("a");
-  var srch = "gh-pages";
+  var tags = document.getElementsByTagName("h2");
+  var srch = "W3C";
+ 
   var slen = srch.length;
   var i;
+  var p;
 
+  console.log("Aantal <h2> is " + tags.length);
   for (i = 0; i < tags.length; i++) 
   {
-    if(tags[i].href.indexOf(srch) > -1)
+    console.log("Tekst is: [" + tags[i].innerHTML + "]");
+    //-- Vervang Tekst (W3C door BSE)
+    p = tags[i].innerHTML.indexOf(srch);
+    if(p > -1)
     {
-      console.log(tags[i].href + " is gevonden");
-      tags[i].href = tags[i].href.substring(0, tags[i].href.length - slen);
-      console.log(tags[i].href + " is aangepast");
+      tags[i].innerHTML = "BSE" + tags[i].innerHTML.substring(p + slen);
+      console.log("Tekst wordt: [" + tags[i].innerHTML + "]");
       break;
     }
   } 
@@ -38,75 +40,29 @@ function custGHPG(respecConfig)
 //-------------------------------------------------------------------------------------
 var respecConfig = 
 {
-  //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
-  //specStatus: "GN-BASIS",             // Basis Document
-  //specStatus: "GN-WV",              // Werk Versie
-  //specStatus: "GN-CV",              // Consultatie Versie
-  //specStatus: "GN-VV",              // Vaststellings Versie
-  //specStatus: "GN-DEF",             // Definitieve Versie
-  //-- specType is verplicht bij alle andere dan BASIS ---------------------------------
-  //specType: "NO",                   // Norm
-  //specType: "ST",                   // Standaard
-  //specType: "IM",                   // Informatie Model
-  //specType: "PR",                   // Praktijkrichtlijn
-  //specType: "HR",                   // HandReiking
-  //specType: "WA",                   // Werkafspraak
-  //specType: "BD",                     // Beheer Documentatie
-  //-- format is verplicht! -----------------------------------------------------------
-  format: "markdown",                 // altijd "markdown"     
-  //-- publishDate is verplicht -------------------------------------------------------
-  //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  //publishDate: "2019-10-08",  	    // Format is "YYYY-MM-DD"
-  //-- Repositorynaam op GitHub -------------------------------------------------------
+  addSectionLinks: false,
+  subtitle: "De Vloot",
+  format: "markdown",                 // altijd "markdown"  
   github: "https://github.com/JvGldr/botters",
-  //-- Repositorynaam/issues op GitHub ------------------------------------------------
   issueBase: "https://github.com/JvGldr/Rapport/issues",
-  //-- edDraftURI: de URI van de werkversie van het document
-  edDraftURI: "https://github/JvGdr/botters",
-  //-- de namen van de Editor(s) ------------------------------------------------------
-  //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
+  edDraftURI: "https://github/JvGldr/botters",
   editors: 
- [
+  [
     {
       name:       "Jan van Gelder",
       company:    "Botterstichting Elburg",
-      companyURL: "https://www.botterselburg.nl"
+      companyURL: "https://www.botterselburg.nl",
     }, 
   ],
-  //-- de namen van de Author(s) ------------------------------------------------------
-  //-- vul in: per Author: name:, company:, companyURL: -------------------------------
   authors: 
   [
     {
       name:       "Peter IJben",
       company:    "Botterstichting Elburg",
-      companyURL: "https://www.botterselburg.nl"
+      companyURL: "https://www.botterselburg.nl",
     }, 
   ],
-  //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
-  //shortName: "et",  	              // Wordt gebruikt in de document URL
-  //-- pubDomain is verplicht! (komt in de URL: Activeer 1 van de volgende) ------------
-  //pubDomain: "et", 	              // Energie transitie
-  //pubDomain: "mim", 	            // Metamodel Informatie Modellering
-  //pubDomain: "bor", 	            // Beheer Openbare Ruimte
-  //pubDomain: "bro", 	            // Basisregistratie Ondergrond
-  //pubDomain: "imgeo", 	          // IMGeo / BGT
-  //pubDomain: "kl", 	              // Kabels en Leidingen
-  //pubDomain: "liv", 	            // Landelijke Informatievoorziening Vastgoedgebruik
-  //pubDomain: "md", 	              // Metadata
-  //pubDomain: "nen3610", 	        // Basismodel NEN3610
-  //pubDomain: "oov", 	            // Openbare Orde en Veiligheid
-  //pubDomain: "ro", 	              // Ruimtelijke Ordening
-  //pubDomain: "serv", 	            // Services
-  //pubDomain: "visu", 	            // Visualisatie
-  //pubDomain: "wp", 	              // White Paper
-  //-- license: voor de geldende gebruiksvoorwaarden
-  //licence: "cc-by-nd",            // bronvermelding, geen afgeleide werken (default)
-  //licence: "cc0",                 // Public Domain Dedication
-  licence: "cc-by",                 // Attribution, met bronvermelding
-  
-  //-- localBiblio: lokale bibliografie, voor verwijzigingen
-  //-- NB: kijk eesrt naar de beschikbare www.specref.org voor verwijziging 
+  //licence: "cc-by",
   localBiblio: 
   {
     "PUB-1":
@@ -142,24 +98,13 @@ var respecConfig =
         company:    "Companynaam",
     },
   },
-  postProcess:[custGHPG],   //-- Optioneel voor een multi document repository
-
-  //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
-  //previousPublishDate: "2018-09-18",  	    // Format is "YYY-MM-DD"
-  //previousMaturity: "CV",                   // kies 1 van deze 2 regels  	  
-  //previousMaturity: "VV",  	                // kies 1 van deze 2 regels
-
-  //-- Optionele parameters:
-  //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!
-  //subtitle: "iets",                         // Subtitel van het document
-  //maxTocLevel: 3,                           // Aantal niveau's ToC, default is 0
-  //-- LOGO: Hier kan je een ander logo opgeven indien nodig
   logos: [{
     src: "./media/logo.jpg",
     alt: "Botterstichting Elburg",
     id: "TopLogo",
-    height: 67,
+    height: 150,
     width: 300,
-    url: "https://www.botterselburg.nl/"
+    url: "https://www.botterselburg.nl/",
   }],
+  postProcess:[respecPost],
 };
