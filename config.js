@@ -15,34 +15,52 @@
 //-- JvG 2019-11-12
 function respecPost(respecConfig)  
 {
-  var tags = document.getElementsByTagName("h2");
-  var srch = "W3C";
- 
-  var slen = srch.length;
   var i;
   var p;
 
-  console.log("Aantal <h2> is " + tags.length);
+  //-- vervang de <h2> tekst W3S door BSE
+  var tags = document.getElementsByTagName("h2");
+  var srch = "W3C";
   for (i = 0; i < tags.length; i++) 
   {
-    console.log("Tekst is: [" + tags[i].innerHTML + "]");
-    //-- Vervang Tekst (W3C door BSE)
+    console.log("Tekst [" + tags[i].innerHTML + "] is gevonden");
     p = tags[i].innerHTML.indexOf(srch);
     if(p > -1)
     {
-      tags[i].innerHTML = "BSE" + tags[i].innerHTML.substring(p + slen);
-      console.log("Tekst wordt: [" + tags[i].innerHTML + "]");
+      tags[i].innerHTML = "BSE" + tags[i].innerHTML.substring(p + srch.length);
+      console.log("Tekst [" + tags[i].innerHTML + "] is vervangen");
       break;
     }
-  } 
+  }
+
+  //-- verwijder de <p> waarin het copyright staat
+  var tags = document.getElementsByTagName("p");
+  var srch = "copyright";
+  for (i = 0; i < tags.length; i++) 
+  {
+    if(tags[i].className = srch)
+    {
+      console.log("Class [" + srch + "] is gevonden");
+      tags[i].parentNode.removeChild(tags[i]);
+      console.log("Class [" + srch + "] is verwijderd");
+      break;
+    }
+  }
+
+  //-- verwijder de <section> met het id "sotd"
+  var srch = "sotd";
+  var tag = document.getElementById(srch);
+  console.log("Section is [" + srch + "] is gevonden");
+  tag.parentNode.removeChild(tag);
+  console.log("Section is [" + srch + "] is verwijderd");
 }
 
 //-------------------------------------------------------------------------------------
 var respecConfig = 
 {
   addSectionLinks: false,
-  subtitle: "De Vloot",
-  format: "markdown",                 // altijd "markdown"  
+  subtitle: "Botters en Bons",
+  format: "markdown",  
   github: "https://github.com/JvGldr/botters",
   issueBase: "https://github.com/JvGldr/Rapport/issues",
   edDraftURI: "https://github/JvGldr/botters",
@@ -99,11 +117,11 @@ var respecConfig =
     },
   },
   logos: [{
-    src: "./media/logo.jpg",
+    src: "https://www.botterselburg.nl/images/botterstichting_logo.jpg",
     alt: "Botterstichting Elburg",
     id: "TopLogo",
-    height: 150,
-    width: 300,
+    //height: 100,    // wordt overschreven in css
+    //width: 300,     // wordt overschreven in css
     url: "https://www.botterselburg.nl/",
   }],
   postProcess:[respecPost],
