@@ -80,7 +80,7 @@ var respecConfig =
       companyURL: "https://www.botterselburg.nl",
     }, 
   ],
-  //licence: "cc-by",
+  licence: "cc-by",
   localBiblio: 
   {
     "PUB-1":
