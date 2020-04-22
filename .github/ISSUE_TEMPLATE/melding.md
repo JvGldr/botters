@@ -11,7 +11,7 @@ assignees: ''
 [Een korte beschring van de Melding]
 
 **Welk hoofdstuk**
-[Plak hier een link naar het betreffende hoofdstuk] *(tip: staat in de adresbalk van de browser*
+[Plak hier een link naar het betreffende hoofdstuk] *(tip: staat in de adresbalk van de browser)*
 
 **Oude tekst**
 [knip en plak hier de te vervangen tekst]
