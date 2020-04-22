@@ -1,6 +1,6 @@
 # botters
 Overzicht van de Vloot van de Botterstichting Elburg
 
-Per Schip "het verhaal" en de "gegevens 
+Per Schip "het verhaal" en de "gegevens" 
 
-Voor het document zelf: https://jvgldr.github.io/botters
+Voor het document zelf kies: https://jvgldr.github.io/botters
