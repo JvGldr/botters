@@ -18,24 +18,38 @@ function respecPost(respecConfig)
   var i;
   var p;
 
-  //-- vervang de <h2> tekst W3S door BSE
-  var tags = document.getElementsByTagName("h2");
+  //-- vervang de tekst 'W3S' door 'BSE' in het betreffende <h2> element 
   var srch = "W3C";
+  var tags = document.getElementsByTagName("h2");
   for (i = 0; i < tags.length; i++) 
   {
-    console.log("Tekst [" + tags[i].innerHTML + "] is gevonden");
     p = tags[i].innerHTML.indexOf(srch);
     if(p > -1)
     {
+      console.log("Tekst [" + tags[i].innerHTML + "] is gevonden");
       tags[i].innerHTML = "BSE" + tags[i].innerHTML.substring(p + srch.length);
-      console.log("Tekst [" + tags[i].innerHTML + "] is vervangen");
+      console.log("Tekst [" + tags[i].innerHTML + "] is aangepast");
       break;
     }
   }
 
-  //-- verwijder de <p> waarin het copyright staat
-  var tags = document.getElementsByTagName("p");
+  //-- verwijder de tekst 'gh-pages' in de betreffende <a> tag 
+  var srch = "gh-pages";
+  var tags = document.getElementsByTagName("a");
+  for (i = 0; i < tags.length; i++) 
+  {
+    if(tags[i].href.indexOf(srch) > -1)
+    {
+      console.log("Tekst ["+ tags[i].href + "] is gevonden");
+      tags[i].href = tags[i].href.substring(0, tags[i].href.length - srch.length);
+      console.log("Tekst ["+ tags[i].href + "] is aangepast");
+      break;
+    }
+  } 
+
+  //-- verwijder het <p> elemment met classname = 'copyright' 
   var srch = "copyright";
+  var tags = document.getElementsByTagName("p");
   for (i = 0; i < tags.length; i++) 
   {
     if(tags[i].className = srch)
@@ -47,7 +61,7 @@ function respecPost(respecConfig)
     }
   }
 
-  //-- verwijder de <section> met het id "sotd"
+  //-- verwijder het <section> element met id = 'sotd'
   var srch = "sotd";
   var tag = document.getElementById(srch);
   console.log("Section is [" + srch + "] is gevonden");
@@ -58,8 +72,8 @@ function respecPost(respecConfig)
 //-------------------------------------------------------------------------------------
 var respecConfig = 
 {
-  addSectionLinks: false,
-  subtitle: "Botters en Bons",
+  addSectionLinks: false,         // verwijdert de paragraaftekens
+  subtitle: "Ons Varend Erfgoed",
   format: "markdown",  
   github: "https://github.com/JvGldr/botters",
   issueBase: "https://github.com/JvGldr/Rapport/issues",
