@@ -77,7 +77,7 @@ var respecConfig =
   format: "markdown",  
   github: "https://github.com/JvGldr/botters",
   issueBase: "https://github.com/JvGldr/Rapport/issues",
-  edDraftURI: "https://github/JvGldr/botters",
+  edDraftURI: "https://github.com/JvGldr/botters",
   editors: 
   [
     {

@@ -2,7 +2,7 @@
 
 Dit document bevat de *verhalen* van de vloot van de [Elburger Botterstichting](https://www.botterselburg.nl). 
 Het document is primair bedoeld voor de vrijwilligers waarop de Stichting drijft. Het biedt een compact 
-overzicht van de wetensweaadigheden van de schepen.
+overzicht van de wetenswaardigheden van onze schepen.
 
 Via de links in deze tabel kan snel naar de pagina van het betreffende schip worden gesprongen.
 
