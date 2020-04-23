@@ -1,0 +1,82 @@
+
+<h2>Geonovum Handreiking<br>
+    Vastgestelde versie <time class="dt-published" datetime="2020-02-04">04 februari 2020</time></h2>
+    <dl>
+        <dt>Deze versie:</dt>
+        <dd>
+            <a class="u-url" href="https://docs.geostandaarden.nl/api/def-hr-API-Strategie-20200204/">https://docs.geostandaarden.nl/api/def-hr-API-Strategie-20200204/</a>
+        </dd>
+        <dt>Laatst gepubliceerde versie:</dt>
+        <dd>
+            <a href="https://docs.geostandaarden.nl/api/API-Strategie/">https://docs.geostandaarden.nl/api/API-Strategie/</a>
+        </dd>
+        <dt>Vorige versie:</dt>
+        <dd>
+            <a href="https://docs.geostandaarden.nl/api/vv-hr-API-Strategie-20200117/">https://docs.geostandaarden.nl/api/vv-hr-API-Strategie-20200117/</a>
+        </dd>
+
+        <!-- VANAF HIER STANDAARD W3C -->
+
+        <dt>Laatste werkversie:</dt>
+        <dd>
+            <a href="https://geonovum.github.io/KP-APIs/">https://geonovum.github.io/KP-APIs/</a>
+        </dd>
+        <dt>Redacteurs:</dt>
+        <dd class="p-author h-card vcard">
+            <span class="p-name fn">Frank Terpstra</span>, <a class="p-org org h-org h-card" href="http://www.geonovum.nl/">Geonovum</a>
+        </dd>
+        <dd class="p-author h-card vcard">
+            <span class="p-name fn">Jan van Gelder</span>, <a class="p-org org h-org h-card" href="http://www.Geonovum.nl/">Geonovum</a>
+        </dd>
+
+
+        <dt>Auteurs:</dt>
+        <dd class="p-author h-card vcard">
+            <span class="p-name fn">Lancelot Schellevis</span>, <a class="p-org org h-org h-card" href="http://www.forumstandaardisatie.nl/">Forum Standaardisatie</a>
+        </dd>
+        <dd class="p-author h-card vcard">
+            <span class="p-name fn">Han Zuidweg</span>, <a class="p-org org h-org h-card" href="http://www.forumstandaardisatie.nl/">Forum Standaardisatie</a>
+        </dd>
+        <dd class="p-author h-card vcard">
+            <span class="p-name fn">Friso Penninga</span>, <a class="p-org org h-org h-card" href="http://geonovum.nl/">Geonovum</a>
+        </dd>
+        <dd class="p-author h-card vcard">
+            <span class="p-name fn">Matthias Snoei</span>, <a class="p-org org h-org h-card" href="http://swis.nl/">Swis</a>
+        </dd>
+        <dd class="p-author h-card vcard">
+            <span class="p-name fn">Jasper Roes</span>, <a class="p-org org h-org h-card" href="http://www.kadaster.nl/">Het Kadaster</a>
+        </dd>
+        <dd class="p-author h-card vcard">
+            <span class="p-name fn">Peter Haasnoot</span>, <a class="p-org org h-org h-card" href="www.logius.nl">Logius</a>
+        </dd>
+
+        <dt>Doe mee:</dt>
+        <dd>
+            <a href="https://github.com/geonovum/KP-APIs/">GitHub geonovum/KP-APIs</a>
+        </dd>
+        <dd>
+            <a href="https://github.com/geonovum/KP-APIs/issues/">Dien een melding in</a>
+        </dd>
+        <dd>
+            <a href="https://github.com/geonovum/KP-APIs/commits/">Revisiehistorie</a>
+        </dd>
+        <dd>
+            <a href="https://github.com/geonovum/KP-APIs/pulls/">Pull requests</a>
+        </dd>
+    </dl>
+    
+    <!-- BEGIN: GEONOVUM AANGEPAST STUK -->
+    <dl>
+        <dt>Rechtenbeleid:</dt>
+        <dd>
+            <div class="copyright" style="margin: 0.25em 0;">
+                <abbr title="Creative Commons Attribution 4.0 International Public License">
+                    <a href="https://creativecommons.org/licenses/by/4.0/legalcode"><img src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Creative Commons Attribution 4.0 International Public License" width="115" height="40"></a>
+                </abbr>
+                <div style="display:inline-block; vertical-align:top">
+                    <p style="font-size: small;">Creative Commons Attribution 4.0 International Public License<br>(CC-BY)</p>
+                </div>
+            </div>
+        </dd>
+    </dl>
+    <!-- BEGIN: GEONOVUM AANGEPAST STUK -->

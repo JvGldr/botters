@@ -10,64 +10,6 @@
 //-- Log . . . :  20181015 - JvG - Initiele versie 
 //-- Log . . . :  20191022 - GRK - Handreiking Archiveren ruimtelijke plannen v2.0      
 //-------------------------------------------------------------------------------------
-//-- Postprocessor voor ResPec
-
-//-- JvG 2019-11-12
-function respecPost(respecConfig)  
-{
-  var i;
-  var p;
-
-  //-- vervang de tekst 'W3S' door 'BSE' in het betreffende <h2> element 
-  var srch = "W3C";
-  var tags = document.getElementsByTagName("h2");
-  for (i = 0; i < tags.length; i++) 
-  {
-    p = tags[i].innerHTML.indexOf(srch);
-    if(p > -1)
-    {
-      console.log("Tekst [" + tags[i].innerHTML + "] is gevonden");
-      tags[i].innerHTML = "BSE" + tags[i].innerHTML.substring(p + srch.length);
-      console.log("Tekst [" + tags[i].innerHTML + "] is aangepast");
-      break;
-    }
-  }
-
-  //-- verwijder de tekst 'gh-pages' in de betreffende <a> tag 
-  var srch = "gh-pages";
-  var tags = document.getElementsByTagName("a");
-  for (i = 0; i < tags.length; i++) 
-  {
-    if(tags[i].href.indexOf(srch) > -1)
-    {
-      console.log("Tekst ["+ tags[i].href + "] is gevonden");
-      tags[i].href = tags[i].href.substring(0, tags[i].href.length - srch.length);
-      console.log("Tekst ["+ tags[i].href + "] is aangepast");
-      break;
-    }
-  } 
-
-  //-- verwijder het <p> elemment met classname = 'copyright' 
-  var srch = "copyright";
-  var tags = document.getElementsByTagName("p");
-  for (i = 0; i < tags.length; i++) 
-  {
-    if(tags[i].className = srch)
-    {
-      console.log("Class [" + srch + "] is gevonden");
-      tags[i].parentNode.removeChild(tags[i]);
-      console.log("Class [" + srch + "] is verwijderd");
-      break;
-    }
-  }
-
-  //-- verwijder het <section> element met id = 'sotd'
-  var srch = "sotd";
-  var tag = document.getElementById(srch);
-  console.log("Section is [" + srch + "] is gevonden");
-  tag.parentNode.removeChild(tag);
-  console.log("Section is [" + srch + "] is verwijderd");
-}
 
 //-------------------------------------------------------------------------------------
 var respecConfig = 
@@ -140,3 +82,92 @@ var respecConfig =
   }],
   postProcess:[respecPost],
 };
+
+
+function respecPost(respecConfig)  
+{
+  var i;
+  var p;
+  
+  //-- vervang de tekst 'W3S' door 'BSE' in het betreffende <h2> element 
+  var srch = "W3C";
+  var tags = document.getElementsByTagName("h2");
+  for (i = 0; i < tags.length; i++) 
+  {
+    p = tags[i].innerHTML.indexOf(srch);
+    if(p > -1)
+    {
+      console.log("Tekst [" + tags[i].innerHTML + "] is gevonden");
+      tags[i].innerHTML = "BSE" + tags[i].innerHTML.substring(p + srch.length);
+      console.log("Tekst [" + tags[i].innerHTML + "] is aangepast");
+      break;
+    }
+  }
+  
+  //-- verwijder de tekst 'gh-pages' in de betreffende <a> tag 
+  var srch = "gh-pages";
+  var tags = document.getElementsByTagName("a");
+  for (i = 0; i < tags.length; i++) 
+  {
+    if(tags[i].href.indexOf(srch) > -1)
+    {
+      console.log("Tekst ["+ tags[i].href + "] is gevonden");
+      tags[i].href = tags[i].href.substring(0, tags[i].href.length - srch.length);
+      console.log("Tekst ["+ tags[i].href + "] is aangepast");
+      break;
+    }
+  } 
+
+  //-- verwijder het <p> element met classname = 'copyright' 
+  //var fs = require('fs');
+  var srch = "copyright";
+  var tags = document.getElementsByTagName("p");
+  for (i = 0; i < tags.length; i++) 
+  {
+    if(tags[i].className = srch)
+    {
+      console.log("Class [" + srch + "] is gevonden");
+
+      console.log("Opgegeven in config is [" + respecConfig.licence + "]");
+      switch(respecConfig.licence) 
+      {
+        case "none":
+          tags[i].parentNode.removeChild(tags[i]);
+          console.log("Class [" + srch + "] is verwijderd");
+          break;
+
+        case "cc-by":
+          tags[i].innerHTML = 
+          '<dl>' + 
+          '<dt>Rechtenbeleid:</dt>' + 
+            '<dd>' +
+              '<div class="copyright" style="margin: 0.25em 0;">' +
+                '<abbr title="Creative Commons Attribution 4.0 International Public License">' +
+                  '<a href="https://creativecommons.org/licenses/by/4.0/legalcode">' +
+                    '<img src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Creative Commons Attribution 4.0 International Public License" width="115" height="40">' +
+                  '</a>' +
+                '</abbr>' +
+                '<div style="display:inline-block; vertical-align:top">' +
+                  '<p style="font-size: small;">Creative Commons Attribution 4.0 International Public License<br>(CC-BY)</p>' +
+                '</div>' +
+              '</div>' +
+            '</dd>' +
+          '</dl>';
+          console.log("Class [" + srch + "] is aangepast naar [" + respecConfig.licence +"]" );
+          break;
+      
+        default:
+          console.log("Class [" + srch + "] is NIET aangepast");
+          break;
+      } 
+      break;
+    }
+  }
+
+  //-- verwijder het <section> element met id = 'sotd'
+  var srch = "sotd";
+  var tag = document.getElementById(srch);
+  console.log("Section is [" + srch + "] is gevonden");
+  tag.parentNode.removeChild(tag);
+  console.log("Section is [" + srch + "] is verwijderd");
+}
