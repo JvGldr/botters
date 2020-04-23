@@ -89,7 +89,7 @@ var respecConfig =
   authors: 
   [
     {
-      name:       "Peter IJben",
+      name:       "Werkgroep Communicatie",
       company:    "Botterstichting Elburg",
       companyURL: "https://www.botterselburg.nl",
     }, 
