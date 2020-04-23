@@ -15,11 +15,11 @@
 var respecConfig = 
 {
   addSectionLinks: false,         // verwijdert de paragraaftekens
-  subtitle: "Ons Varend Erfgoed",
-  format: "markdown",  
-  github: "https://github.com/JvGldr/botters",
-  issueBase: "https://github.com/JvGldr/Rapport/issues",
-  edDraftURI: "https://github.com/JvGldr/botters",
+  subtitle:       "Ons Varend Erfgoed",
+  format:         "markdown",  
+  github:         "https://github.com/JvGldr/botters",
+  issueBase:      "https://github.com/JvGldr/Rapport/issues",
+  edDraftURI:     "https://github.com/JvGldr/botters",
   editors: 
   [
     {
@@ -36,7 +36,7 @@ var respecConfig =
       companyURL: "https://www.botterselburg.nl",
     }, 
   ],
-  licence: "cc-by",
+  licence:        "cc-by-nd",
   localBiblio: 
   {
     "PUB-1":
@@ -73,101 +73,20 @@ var respecConfig =
     },
   },
   logos: [{
-    src: "https://www.botterselburg.nl/images/botterstichting_logo.jpg",
-    alt: "Botterstichting Elburg",
-    id: "TopLogo",
-    //height: 100,    // wordt overschreven in css
-    //width: 300,     // wordt overschreven in css
-    url: "https://www.botterselburg.nl/",
+    src:            "https://www.botterselburg.nl/images/botterstichting_logo.jpg",
+    alt:            "Botterstichting Elburg",
+    id:             "TopLogo",
+  //height: 100,    // wordt overschreven in css
+  //width: 300,     // wordt overschreven in css
+    url:            "https://www.botterselburg.nl/",
   }],
   postProcess:[respecPost],
 };
 
-
-function respecPost(respecConfig)  
+//-------------------------------------------------------------------------------------
+var serverConfig =
 {
-  var i;
-  var p;
-  
-  //-- vervang de tekst 'W3S' door 'BSE' in het betreffende <h2> element 
-  var srch = "W3C";
-  var tags = document.getElementsByTagName("h2");
-  for (i = 0; i < tags.length; i++) 
-  {
-    p = tags[i].innerHTML.indexOf(srch);
-    if(p > -1)
-    {
-      console.log("Tekst [" + tags[i].innerHTML + "] is gevonden");
-      tags[i].innerHTML = "BSE" + tags[i].innerHTML.substring(p + srch.length);
-      console.log("Tekst [" + tags[i].innerHTML + "] is aangepast");
-      break;
-    }
-  }
-  
-  //-- verwijder de tekst 'gh-pages' in de betreffende <a> tag 
-  var srch = "gh-pages";
-  var tags = document.getElementsByTagName("a");
-  for (i = 0; i < tags.length; i++) 
-  {
-    if(tags[i].href.indexOf(srch) > -1)
-    {
-      console.log("Tekst ["+ tags[i].href + "] is gevonden");
-      tags[i].href = tags[i].href.substring(0, tags[i].href.length - srch.length);
-      console.log("Tekst ["+ tags[i].href + "] is aangepast");
-      break;
-    }
-  } 
-
-  //-- verwijder het <p> element met classname = 'copyright' 
-  //var fs = require('fs');
-  var srch = "copyright";
-  var tags = document.getElementsByTagName("p");
-  for (i = 0; i < tags.length; i++) 
-  {
-    if(tags[i].className = srch)
-    {
-      console.log("Class [" + srch + "] is gevonden");
-
-      console.log("Opgegeven in config is [" + respecConfig.licence + "]");
-      switch(respecConfig.licence) 
-      {
-        case "none":
-          tags[i].parentNode.removeChild(tags[i]);
-          console.log("Class [" + srch + "] is verwijderd");
-          break;
-
-        case "cc-by":
-          tags[i].innerHTML = 
-          '<dl>' + 
-          '<dt>Rechtenbeleid:</dt>' + 
-            '<dd>' +
-              '<div class="copyright" style="margin: 0.25em 0;">' +
-                '<abbr title="Creative Commons Attribution 4.0 International Public License">' +
-                  '<a href="https://creativecommons.org/licenses/by/4.0/legalcode">' +
-                    '<img src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Creative Commons Attribution 4.0 International Public License" width="115" height="40">' +
-                  '</a>' +
-                '</abbr>' +
-                '<div style="display:inline-block; vertical-align:top">' +
-                  '<p style="font-size: small;">Creative Commons Attribution 4.0 International Public License<br>(CC-BY)</p>' +
-                '</div>' +
-              '</div>' +
-            '</dd>' +
-          '</dl>';
-          console.log("Class [" + srch + "] is aangepast naar [" + respecConfig.licence +"]" );
-          break;
-      
-        default:
-          console.log("Class [" + srch + "] is NIET aangepast");
-          break;
-      } 
-      break;
-    }
-  }
-
-  //-- verwijder het <section> element met id = 'sotd'
-  var srch = "sotd";
-  var tag = document.getElementById(srch);
-  console.log("Section is [" + srch + "] is gevonden");
-  tag.parentNode.removeChild(tag);
-  console.log("Section is [" + srch + "] is verwijderd");
+  urlTools:         "https://tools.geostandaarden.nl/",
+  dirBanners:       "respec/style/logos/",  
 }
+
