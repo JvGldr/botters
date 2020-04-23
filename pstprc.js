@@ -9,6 +9,7 @@ function respecPost(respecConfig)
 {
   console.log("Start PostProcessor");
   changeOrgName();
+  changeURLs();
   removeGhPages();
   removeSOTD();
   changeCopyRight();
@@ -50,24 +51,21 @@ function changeCopyRight()
             name  = "Creative Commons 0 Public Domain Dedication";
             short = "CC0";
             url   = "https://creativecommons.org/publicdomain/zero/1.0/";
-            // image = "https://tools.geostandaarden.nl/respec/style/logos/CC-Licentie.svg";
-            image =  serverConfig.urlTools + serverConfig.dirBanners + "CC-Licentie.svg";
+            image =  orgConfig.urlTls + orgConfig.dirBanners + "CC-Licentie.svg";
             break;
 
           case "cc-by":
             name  = "Creative Commons Attribution 4.0 International Public License";
             short = "CC-BY";
             url   = "https://creativecommons.org/licenses/by/4.0/legalcode";
-            // image = "https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg";
-            image =  serverConfig.urlTools + serverConfig.dirBanners + "cc-by.svg";
+            image =  orgConfig.urlTls + orgConfig.dirBanners + "cc-by.svg";
             break;
 
           case "cc-by-nd":
             name  = "Creative Commons Attribution-NoDerivatives 4.0 International Public License";
             short = "CC-BY-ND";
             url   = "https://creativecommons.org/licenses/by-nd/4.0/legalcode.nl";
-            // image = "https://tools.geostandaarden.nl/respec/style/logos/cc-by-nd.svg";
-            image =  serverConfig.urlTools + serverConfig.dirBanners + "cc-by-nd.svg";
+            image =  orgConfig.urlTls + orgConfig.dirBanners + "cc-by-nd.svg";
             break;
 
           case "none":
@@ -130,15 +128,61 @@ function changeOrgName()
     p = tags[i].innerHTML.indexOf(srch);
     if(p > -1)
     {
-      console.log("innerHTML [" + tags[i].innerHTML + "] is gevonden");
-      tags[i].innerHTML = "BSE" + tags[i].innerHTML.substring(p + srch.length);
-      console.log("innerHTML [" + tags[i].innerHTML + "] is aangepast");
+      console.log("innerHTML [" + srch + "] is gevonden");
+      tags[i].innerHTML = orgConfig.orgName + tags[i].innerHTML.substring(p + srch.length);
+      console.log("innerHTML [" + orgConfig.orgName + "] is aangepast");
       break;
     }
   }
 
   console.log("Einde changeOrgName");
 }
+
+//-------------------------------------------------------------------------------------
+//-- vervang de standaard W3C URL's in de betreffende <a> element 
+//-------------------------------------------------------------------------------------
+function changeURLs()
+{
+  console.log("Start changeURLs");
+  let cdate = new Date();
+  let fdate = "-" + cdate.getFullYear()  + "" + (cdate.getMonth() + 1) + "" + cdate.getDate();
+  let pdate = "02-02-2020"; //respecConfig.previousPublishDate;
+  console.log(pdate);
+  var i,p,t=0;
+  var srch = "www.w3.org";
+  var tags = document.getElementsByTagName("a");
+  for (i = 0; i < tags.length; i++) 
+  {
+    p = tags[i].innerHTML.indexOf(srch);
+    if(p > -1)
+    {
+
+      console.log("innerHTML [" + srch + "] is gevonden");
+      switch(t)
+      {
+        case 0:
+          tags[i].innerHTML = orgConfig.urlPub + respecConfig.specStatus + "-" + respecConfig.pubDomain + "-" + respecConfig.shortName + fdate;
+          tags[i].href = tags[i].innerHTML;
+          break;
+        case 1:
+            //tags[i].innerHTML = orgConfig.urlPub + respecConfig.specStatus + "-" + respecConfig.pubDomain + "-" + respecConfig.shortName + fdate;
+            //tags[i].href = tags[i].innerHTML;
+            break;
+          case 2:
+            tags[i].innerHTML = orgConfig.urlPub + respecConfig.previousMaturity + "-" + respecConfig.pubDomain + "-" + respecConfig.shortName + pdate;
+            //tags[i].href = tags[i].innerHTML;
+            break;
+      }
+      console.log("innerHTML [" + orgConfig.urlPub + "] is aangepast en href ook");
+
+      t++;
+      if(t > 2) break;
+    }
+  }
+
+  console.log("Einde changeOrgName");
+}
+
 
 
 //-------------------------------------------------------------------------------------
