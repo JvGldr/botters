@@ -38,27 +38,28 @@ table
 {
   empty-cells: show;
   min-width: 90%;
-  border-color: #990000;
-  border-style: solid;
+  border-color: lightgray;
+  border-style: none;
 }
 
 /*-- Definite van de kopregel van een tabel ----------------------------------------*/
 thead
 {
-  background-color: #990000;
+  background-color: darkblue;
   color:white;
 }
 /*-- Definite van de body van een tabel --------------------------------------------*/
 tbody
 {
-  border-color:#cc6600;
-  background-color: lightgoldenrodyellow;
+  border-color: lightsteelblue;
+  background-color: lightskyblue;
+  padding: 0 1em;
 }
 
 /*-- Definite van de tabel-rij (deze zorgt voor 2 kleuren in de rijen) -------------*/
 tr:nth-child(even) 
 {
-  background-color:  #cc9900;
+  background-color: lightblue;
 }
 
 /*-- Definite van de tabel-cel (data) ----------------------------------------------*/
@@ -78,9 +79,9 @@ r
 {
   font-family: 'Esteban', serif;
   font-style: italic;
-  border-color: brown;
+  border-color: lightskyblue;
   border-style: solid;
-  background-color: rosybrown !important;
+  background-color:darkcyan !important;
   color:white;
   padding: 0 1em;
   margin-top: 1.5em;
@@ -90,5 +91,5 @@ r
 {
   content: "Uit de memoires van Henk Hulst:";
   padding-right: 8px;
-  color: darkmagenta; /* Or a color you prefer */
+  color: lightskyblue; /* Or a color you prefer */
 }

@@ -25,43 +25,47 @@ var respecConfig =
   licence:        "cc-by-nd",
 
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
-  specStatus: "WV",                 // Werk Versie
-  //specStatus: "CV",               // Consultatie Versie
-  //specStatus: "VV",               // Vaststellings Versie
-  //specStatus: "DF",               // Definitece (Vastgestelde) Versie
+  specStatus: "WV",                   // Werk Versie
+  //specStatus: "CV",                 // Consultatie Versie
+  //specStatus: "VV",                 // Vaststellings Versie
+  //specStatus: "DF",                 // Definitieve (Vastgestelde) Versie
+  previousMaturity: "WV",             // De vorige specStatus
+
+  //-- Publicatie datums --------------------------------------------------------------
+  //publishDate: "2020-02-02",  	      // Format is "YYYY-MM-DD" (default = vandaag)
+  previousPublishDate: "1900-01-01",  // Format is "YYYY-MM-DD" ("1900-01-01" als die er niet was)
 
   //-- specType is verplicht! (activeer 1 van de volgende) ----------------------------
-  //specType: "NO",                   // Norm
-  //specType: "ST",                   // Standaard
-  //specType: "IM",                   // Informatie Model
-  //specType: "PR",                   // Praktijk Richtlijn
-  //specType: "HR",                   // HandReiking
-  //specType: "WA",                   // Werkafspraak
-  //specType: "US",                   // Uitwisselings standaard
-  //specType: "PS",                   // Presentatie sstandaard
+  //specType: "OD",                     // Opleidings Document
+  //specType: "NO",                     // Norm
+  //specType: "ST",                     // Standaard
+  //specType: "IM",                     // Informatie Model
+  //specType: "PR",                     // Praktijk Richtlijn
+  //specType: "HR",                     // HandReiking
+  //specType: "WA",                     // Werkafspraak
+  //specType: "US",                     // Uitwisselings standaard
+  //specType: "PS",                     // Presentatie standaard
+  //specType: "BD",                     // Beheer Document
 
-  //publishDate: "2020-02-25",  	    // Format is "YYYY-MM-DD"
-  shortName: "vlt", 	              // Wordt gebruikt in de document URL
-  pubDomain: "opl", 	                // Metamodel Informatie Modellering
-  //pubDomain: "bor", 	              // Beheer Openbare Ruimte
-  //pubDomain: "bro", 	              // Basisregistratie Ondergrond
-  //pubDomain: "imgeo", 	            // IMGeo / BGT
-  //pubDomain: "kl", 	                // Kabels en Leidingen
-  //pubDomain: "liv", 	              // Landelijke Informatievoorziening Vastgoedgebruik
-  //pubDomain: "md", 	                // Metadata
-  //pubDomain: "nen3610", 	          // Basismodel NEN3610
-  //pubDomain: "oov", 	              // Openbare Orde en Veiligheid
-  //pubDomain: "ro", 	                // Ruimtelijke Ordening
-  //pubDomain: "serv", 	              // Services
-  //pubDomain: "visu", 	              // Visualisatie
-  //pubDomain: "wp", 	                // White Paper
-  //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit!
-  previousPublishDate: "2020-01-01",    	    // Format is "YYY-MM-DD"
-  previousMaturity: "DF",                 // kies 1 van deze 3 regels
+  shortName: "vlt", 	                  // Wordt gebruikt in de document URL
+  pubDomain: "opl", 	                  // Metamodel Informatie Modellering
+
+  //pubDomain: "bor", 	                // Beheer Openbare Ruimte
+  //pubDomain: "bro", 	                // Basisregistratie Ondergrond
+  //pubDomain: "imgeo", 	              // IMGeo / BGT
+  //pubDomain: "kl", 	                  // Kabels en Leidingen
+  //pubDomain: "liv", 	                // Landelijke Informatievoorziening Vastgoedgebruik
+  //pubDomain: "md", 	                  // Metadata
+  //pubDomain: "nen3610", 	            // Basismodel NEN3610
+  //pubDomain: "oov", 	                // Openbare Orde en Veiligheid
+  //pubDomain: "ro", 	                  // Ruimtelijke Ordening
+  //pubDomain: "serv", 	                // Services
+  //pubDomain: "visu", 	                // Visualisatie
+  //pubDomain: "wp", 	                  // White Paper
 
   //-- Optionele parameters:
-  //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!
-  maxTocLevel: 4,                             // Aantal niveau's ToC, default is 0
+  //emailComments: "mim@geonovum.nl",   // reactie mailadres, alleen bij CV!
+  maxTocLevel: 4,                       // Aantal niveau's ToC, default is 0
 
   editors: 
   [
@@ -76,6 +80,11 @@ var respecConfig =
   [
     {
       name:       "Werkgroep Communicatie",
+      company:    "Botterstichting Elburg",
+      companyURL: "https://www.botterselburg.nl",
+    }, 
+    {
+      name:       "Werkgroep Museum",
       company:    "Botterstichting Elburg",
       companyURL: "https://www.botterselburg.nl",
     }, 
@@ -132,7 +141,7 @@ var orgConfig =
   orgName:          "Botterstichting Elburg",
   urlTls:           "https://tools.geostandaarden.nl/",
   dirBanners:       "respec/style/logos/",
-  urlPub:           "https://www.botterselburg.nl/vrijwilligers/",
-
+  urlPub:           "https://www.botterselburg.nl/vrijwilligers/documenten/",
+  noSOTD:           true,
 }
 

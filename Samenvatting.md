@@ -16,5 +16,6 @@ Via de links in deze tabel kan snel naar de pagina van het betreffende schip wor
 | [EB39](#de-eb39) | *Bons* | [verhaal](#het-verhaal-van-de-eb39) | [gegevens](#de-gegevens-van-de-eb39) |    
 | [EB43](#de-eb43) | Botter | [verhaal](#het-verhaal-van-de-eb43) | [gegevens](#de-gegevens-van-de-eb43) |    
 | [EB47](#de-eb47) | Botter | [verhaal](#het-verhaal-van-de-eb47) | [gegevens](#de-gegevens-van-de-eb47) |    
+| [EB68](#de-eb68) | Botter | [verhaal](#het-verhaal-van-de-eb68) | [gegevens](#de-gegevens-van-de-eb68) |    
 
 

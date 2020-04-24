@@ -8,25 +8,23 @@
 function respecPost(respecConfig)  
 {
   console.log("Start PostProcessor");
+
   changeOrgName();
   changeURLs();
-  removeGhPages();
-  removeSOTD();
+  changeSOTD();
   changeCopyRight();
+  removeGhPages();
+  changePV();
+
   console.log("Einde PostProcessor");
 }
-
-
-
-
-
 
 //-------------------------------------------------------------------------------------
 //-- verwijder of vervang het <p> element met classname = 'copyright' 
 //-------------------------------------------------------------------------------------
 function changeCopyRight()
 {
-  console.log("Start changeCopyRight");
+  console.log("\tStart changeCopyRight");
   var i;
 
   var name  = "";
@@ -34,7 +32,7 @@ function changeCopyRight()
   var url   = "";
   var image = "";
 
-  console.log("Opgegeven licence in config is [" + respecConfig.licence + "]");
+  console.log("\t\tOpgegeven licence in config is [" + respecConfig.licence + "]");
   if( respecConfig.licence != null)
   {
     var srch = "copyright";
@@ -43,7 +41,7 @@ function changeCopyRight()
     {
       if(tags[i].className = srch)
       {
-        console.log("className [" + srch + "] is gevonden");
+        console.log("\t\tclassName [" + srch + "] is gevonden");
         //-- Bepaal welke licentie het moet worden
         switch(respecConfig.licence) 
         {
@@ -99,7 +97,7 @@ function changeCopyRight()
               '</div>' +
             '</dd>' +
           '</dl>';
-          console.log("className [" + srch + "] is aangepast naar [" + short + "]");
+          console.log("\t\tclassName [" + srch + "] is aangepast naar [" + short + "]");
         } 
         break;
       }
@@ -107,10 +105,10 @@ function changeCopyRight()
   }        
   else
   {
-    console.log("className [" + srch + "] is NIET aangepast");
+    console.log("\tclassName [" + srch + "] is NIET aangepast");
   }
 
-  console.log("Einde changeCopyRight");
+  console.log("\tEinde changeCopyRight");
 }
 
 //-------------------------------------------------------------------------------------
@@ -118,7 +116,7 @@ function changeCopyRight()
 //-------------------------------------------------------------------------------------
 function changeOrgName()
 {
-  console.log("Start changeOrgName");
+  console.log("\tStart changeOrgName");
 
   var i,p;
   var srch = "W3C";
@@ -128,26 +126,82 @@ function changeOrgName()
     p = tags[i].innerHTML.indexOf(srch);
     if(p > -1)
     {
-      console.log("innerHTML [" + srch + "] is gevonden");
+      console.log("\t\tinnerHTML [" + srch + "] is gevonden");
       tags[i].innerHTML = orgConfig.orgName + tags[i].innerHTML.substring(p + srch.length);
-      console.log("innerHTML [" + orgConfig.orgName + "] is aangepast");
+      console.log("\t\tinnerHTML [" + orgConfig.orgName + "] is aangepast");
       break;
     }
   }
 
-  console.log("Einde changeOrgName");
+  console.log("\tEinde changeOrgName");
 }
+
+
+//-------------------------------------------------------------------------------------
+//-- vervang de tekst 'Previous Version' door 'Vorige Versie' in het betreffende <tb> element 
+//-------------------------------------------------------------------------------------
+function changePV()
+{
+  console.log("\tStart changePV");
+
+  var i,p;
+  var srch = "Previous";
+  var tags = document.getElementsByTagName("dt");
+  for (i = 0; i < tags.length; i++) 
+  {
+    p = tags[i].innerHTML.indexOf(srch);
+    if(p > -1)
+    {
+      console.log("\t\tinnerHTML [" + srch + "] is gevonden");
+      tags[i].innerHTML = "Vorige Versie:";
+      console.log("\t\tinnerHTML [" + srch + "] is aangepast");
+      break;
+    }
+  }
+
+  console.log("\tEinde changePV");
+}
+
 
 //-------------------------------------------------------------------------------------
 //-- vervang de standaard W3C URL's in de betreffende <a> element 
 //-------------------------------------------------------------------------------------
 function changeURLs()
 {
-  console.log("Start changeURLs");
-  let cdate = new Date();
-  let fdate = "-" + cdate.getFullYear()  + "" + (cdate.getMonth() + 1) + "" + cdate.getDate();
-  let pdate = "02-02-2020"; //respecConfig.previousPublishDate;
-  console.log(pdate);
+  console.log("\tStart changeURLs");
+  var mm,dd;
+
+  let odate = new Date();   //-- default previous publicatie datum is vandaag
+  let tdate = new Date();   //-- default publicatie datum is vandaag
+
+  let sstat = "";
+  let pstat = "";
+
+  mm = ("0"+ tdate.getMonth() + 1);
+  dd = ("0"+ tdate.getDate());
+  pdate = tdate.getFullYear() + "" + mm.slice(-2) + "" + dd.slice(-2);
+
+  if(respecConfig.publishDate != null)      
+  {
+    tdate = new Date(respecConfig.publishDate);
+    mm = ("0"+ tdate.getMonth() + 1);
+    dd = ("0"+ tdate.getDate());
+    pdate = tdate.getFullYear() + "" + mm.slice(-2) + "" + dd.slice(-2);
+  }
+  if(respecConfig.previousPublishDate != null)
+  {
+    tdate = new Date(respecConfig.previousPublishDate); 
+    mm = ("0"+ tdate.getMonth() + 1);
+    dd = ("0"+ tdate.getDate());
+    odate = tdate.getFullYear() + "" + mm.slice(-2) + "" + dd.slice(-2);
+  }
+
+  if(respecConfig.specStatus != null)        sstat = respecConfig.specStatus.toLowerCase();
+  if(respecConfig.previousMaturity != null)  pstat = respecConfig.previousMaturity.toLowerCase();
+  
+  console.log("\t\todate is ["+odate+"]");
+  console.log("\t\tpdate is ["+pdate+"]");
+
   var i,p,t=0;
   var srch = "www.w3.org";
   var tags = document.getElementsByTagName("a");
@@ -156,41 +210,66 @@ function changeURLs()
     p = tags[i].innerHTML.indexOf(srch);
     if(p > -1)
     {
-
-      console.log("innerHTML [" + srch + "] is gevonden");
+      console.log("\t\tinnerHTML [" + srch + "] is gevonden");
       switch(t)
       {
-        case 0:
-          tags[i].innerHTML = orgConfig.urlPub + respecConfig.specStatus + "-" + respecConfig.pubDomain + "-" + respecConfig.shortName + fdate;
-          tags[i].href = tags[i].innerHTML;
+        case 0:   //-- deze versie
+          tags[i].innerHTML = orgConfig.urlPub + sstat + "-" + respecConfig.pubDomain + "-" + respecConfig.shortName + "-" + pdate;
           break;
-        case 1:
-            //tags[i].innerHTML = orgConfig.urlPub + respecConfig.specStatus + "-" + respecConfig.pubDomain + "-" + respecConfig.shortName + fdate;
-            //tags[i].href = tags[i].innerHTML;
-            break;
-          case 2:
-            tags[i].innerHTML = orgConfig.urlPub + respecConfig.previousMaturity + "-" + respecConfig.pubDomain + "-" + respecConfig.shortName + pdate;
-            //tags[i].href = tags[i].innerHTML;
-            break;
+        case 1:   //-- Laatst gepubliceerde versie
+          tags[i].innerHTML = orgConfig.urlPub + respecConfig.shortName;
+          break;
+        case 2:   //-- Vorige versie
+          if(odate == "19000101")
+          {
+            tags[i].innerHTML = "";
+          }
+          else
+          {
+            tags[i].innerHTML = orgConfig.urlPub + pstat + "-" + respecConfig.pubDomain + "-" + respecConfig.shortName + "-"  + odate;
+          }
+          break;
       }
-      console.log("innerHTML [" + orgConfig.urlPub + "] is aangepast en href ook");
+      tags[i].href = tags[i].innerHTML;
+      console.log("\t\tinnerHTML [" + orgConfig.urlPub + "] is aangepast en href ook");
 
       t++;
       if(t > 2) break;
     }
   }
 
-  console.log("Einde changeOrgName");
+  console.log("\tEinde changeOrgName");
 }
 
+//-------------------------------------------------------------------------------------
+//-- vervang of verwijder het <section> element met id = 'sotd'
+//-------------------------------------------------------------------------------------
+function changeSOTD()
+{
+  console.log("\tStart changeSOTD");
 
+  let sstat = "";
+  if(respecConfig.specStatus != null) sstat = respecConfig.specStatus;
+
+  var srch = "sotd";
+  var tag = document.getElementById(srch);
+  console.log("\t\tsection is [" + srch + "] is gevonden");
+
+  if(orgConfig.noSOTD || sstat == "")
+  {
+    tag.parentNode.removeChild(tag);
+    console.log("\t\tsection is [" + srch + "] is verwijderd");
+  }
+  
+  console.log("\tEinde changeSOTD");
+}
 
 //-------------------------------------------------------------------------------------
 //-- verwijder de tekst 'gh-pages' in de betreffende <a> tag 
 //-------------------------------------------------------------------------------------
 function removeGhPages()
 {
-  console.log("Start removeGhPages");
+  console.log("\tStart removeGhPages");
 
   var i;
   var srch = "gh-pages";
@@ -199,28 +278,15 @@ function removeGhPages()
   {
     if(tags[i].href.indexOf(srch) > -1)
     {
-      console.log("href ["+ tags[i].href + "] is gevonden");
+      console.log("\t\thref ["+ tags[i].href + "] is gevonden");
       tags[i].href = tags[i].href.substring(0, tags[i].href.length - srch.length);
-      console.log("href ["+ tags[i].href + "] is aangepast");
+      console.log("\t\thref ["+ tags[i].href + "] is aangepast");
       break;
     }
   } 
 
-  console.log("Einde removeGhPages");
+  console.log("\tEinde removeGhPages");
 }
 
-//-------------------------------------------------------------------------------------
-//-- verwijder het <section> element met id = 'sotd'
-//-------------------------------------------------------------------------------------
-function removeSOTD()
-{
-  console.log("Start removeSOTD");
 
-  var srch = "sotd";
-  var tag = document.getElementById(srch);
-  console.log("section is [" + srch + "] is gevonden");
-  tag.parentNode.removeChild(tag);
-  console.log("section is [" + srch + "] is verwijderd");
 
-  console.log("Einde removeSOTD");
-}
