@@ -6,6 +6,8 @@
         <dd>
             <a class="u-url" href="https://docs.geostandaarden.nl/api/def-hr-API-Strategie-20200204/">https://docs.geostandaarden.nl/api/def-hr-API-Strategie-20200204/</a>
         </dd>
+
+        
         <dt>Laatst gepubliceerde versie:</dt>
         <dd>
             <a href="https://docs.geostandaarden.nl/api/API-Strategie/">https://docs.geostandaarden.nl/api/API-Strategie/</a>
