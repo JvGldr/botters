@@ -26,6 +26,6 @@ In deze tabel de schepen die in particulier eigendom zijn:
 | Visserijnummer                 | Type    | Verhaal                                    | Gegevens                                    |     
 |--------------------------------|---------| -------------------------------------------|---------------------------------------------|    
 | [EB18 Pluut ](#de-eb18-pluut)  | *Pluut* | [verhaal](#het-verhaal-van-de-eb18-pluut)  | [gegevens](#de-gegevens-van-de-eb18-pluut)  |   
-| [EB18 Botter](#de-eb15-botter) | Botter  | [verhaal](#het-verhaal-van-de-eb18-botter) | [gegevens](#de-gegevens-van-de-eb18-botter) |   
+| [EB18 Botter](#de-eb18-botter) | Botter  | [verhaal](#het-verhaal-van-de-eb18-botter) | [gegevens](#de-gegevens-van-de-eb18-botter) |   
 
 
