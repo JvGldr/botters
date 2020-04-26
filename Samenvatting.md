@@ -6,6 +6,8 @@ overzicht van de wetenswaardigheden van onze schepen.
 
 Via de links in deze tabel kan snel naar de pagina van het betreffende schip worden gesprongen.
 
+In deze tabel de schepen van de Elburger Botterstichting:
+
 | Visserijnummer   | Type   | Verhaal                             | Gegevens                             |     
 |------------------|--------| ------------------------------------|--------------------------------------|    
 | [EB1 ](#de-eb1)  | Botter | [verhaal](#het-verhaal-van-de-eb1)  | [gegevens](#de-gegevens-van-de-eb1)  |   
@@ -17,5 +19,13 @@ Via de links in deze tabel kan snel naar de pagina van het betreffende schip wor
 | [EB43](#de-eb43) | Botter | [verhaal](#het-verhaal-van-de-eb43) | [gegevens](#de-gegevens-van-de-eb43) |    
 | [EB47](#de-eb47) | Botter | [verhaal](#het-verhaal-van-de-eb47) | [gegevens](#de-gegevens-van-de-eb47) |    
 | [EB68](#de-eb68) | Botter | [verhaal](#het-verhaal-van-de-eb68) | [gegevens](#de-gegevens-van-de-eb68) |    
+
+
+In deze tabel de schepen die in particulier eigendom zijn:
+
+| Visserijnummer                 | Type    | Verhaal                                    | Gegevens                                    |     
+|--------------------------------|---------| -------------------------------------------|---------------------------------------------|    
+| [EB18 Pluut ](#de-eb18-pluut)  | *Pluut* | [verhaal](#het-verhaal-van-de-eb18-pluut)  | [gegevens](#de-gegevens-van-de-eb18-pluut)  |   
+| [EB18 Botter](#de-eb15-botter) | Botter  | [verhaal](#het-verhaal-van-de-eb18-botter) | [gegevens](#de-gegevens-van-de-eb18-botter) |   
 
 
