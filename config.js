@@ -16,57 +16,34 @@
 //-------------------------------------------------------------------------------------
 var respecConfig = 
 {
-  addSectionLinks: false,                                     // verwijdert de paragraaftekens
   subtitle:       "Ons Varend Erfgoed",
   format:         "markdown",                                   
   github:         "https://github.com/JvGldr/botters",
   issueBase:      "https://github.com/JvGldr/Rapport/issues",
   edDraftURI:     "https://github.com/JvGldr/botters",
   licence:        "cc-by-nd",
-
-  //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
-  specStatus: "WV",                   // Werk Versie
-  //specStatus: "CV",                 // Consultatie Versie
-  //specStatus: "VV",                 // Vaststellings Versie
-  //specStatus: "DF",                 // Definitieve (Vastgestelde) Versie
-  previousMaturity: "WV",             // De vorige specStatus
-
+  addSectionLinks: false,                 // verwijdert de paragraaftekens
+  maxTocLevel: 3,                         // (Optioneel) Aantal niveau's ToC, default 0
+  //
+  //-- specStatus is verplicht! (zie voor geldige statussen orgConfg.validSpecStats) --
+  specStatus: "WV",                       // (verplicht) Werk Versie 
+  previousMaturity: "WV",                 // (verplicht) De vorige specStatus
+  //
   //-- Publicatie datums --------------------------------------------------------------
-  //publishDate: "2020-02-02",  	      // Format is "YYYY-MM-DD" (default = vandaag)
-  previousPublishDate: "1900-01-01",  // Format is "YYYY-MM-DD" ("1900-01-01" als die er niet was)
-
-  //-- specType is verplicht! (activeer 1 van de volgende) ----------------------------
-  //specType: "OD",                     // Opleidings Document
-  //specType: "NO",                     // Norm
-  //specType: "ST",                     // Standaard
-  //specType: "IM",                     // Informatie Model
-  //specType: "PR",                     // Praktijk Richtlijn
-  //specType: "HR",                     // HandReiking
-  //specType: "WA",                     // Werkafspraak
-  //specType: "US",                     // Uitwisselings standaard
-  //specType: "PS",                     // Presentatie standaard
-  //specType: "BD",                     // Beheer Document
-
-  shortName: "vlt", 	                  // Wordt gebruikt in de document URL
-  pubDomain: "opl", 	                  // Metamodel Informatie Modellering
-
-  //pubDomain: "bor", 	                // Beheer Openbare Ruimte
-  //pubDomain: "bro", 	                // Basisregistratie Ondergrond
-  //pubDomain: "imgeo", 	              // IMGeo / BGT
-  //pubDomain: "kl", 	                  // Kabels en Leidingen
-  //pubDomain: "liv", 	                // Landelijke Informatievoorziening Vastgoedgebruik
-  //pubDomain: "md", 	                  // Metadata
-  //pubDomain: "nen3610", 	            // Basismodel NEN3610
-  //pubDomain: "oov", 	                // Openbare Orde en Veiligheid
-  //pubDomain: "ro", 	                  // Ruimtelijke Ordening
-  //pubDomain: "serv", 	                // Services
-  //pubDomain: "visu", 	                // Visualisatie
-  //pubDomain: "wp", 	                  // White Paper
-
+  //publishDate: "2020-01-30",  	        // Format is "YYYY-MM-DD" (default = vandaag)
+  previousPublishDate: "1900-01-01",      // Format is "YYYY-MM-DD" ("1900-01-01" als die er niet was)
+  //
+  //-- specType (zie voor geldige types orgConfg.validSpecTypes) ----------------------
+  specType: "NW",                         // (verplicht) specType
+  //
+  //-- shortName en pubDomain zijn vooralsnog vrij te kiezen --------------------------
+  shortName: "vlt", 	                    // Wordt gebruikt in de document URL
+  pubDomain: "opl", 	                    // Metamodel Informatie Modellering
+  //
   //-- Optionele parameters:
-  //emailComments: "mim@geonovum.nl",   // reactie mailadres, alleen bij CV!
-  maxTocLevel: 4,                       // Aantal niveau's ToC, default is 0
-
+  emailComments: "info@botterselburg.nl", // reactie mailadres, alleen bij CV!
+  //
+  //-- De editor(s) -------------------------------------------------------------------
   editors: 
   [
     {
@@ -75,7 +52,8 @@ var respecConfig =
       companyURL: "https://www.botterselburg.nl",
     }, 
   ],
-
+  //
+  //-- De auteur(s) -------------------------------------------------------------------
   authors: 
   [
     {
@@ -94,6 +72,8 @@ var respecConfig =
       companyURL: "https://www.botterselburg.nl",
     }, 
   ],
+  //
+  //-- De Local biblio voor nette verwijzigen naar bronnen ----------------------------
   localBiblio: 
   {
     "BSE":
@@ -137,24 +117,104 @@ var respecConfig =
         company:    "Botter EB18",
     },
   },
+  //-- Hier het aangepaste logo van je eigen organisatie ------------------------------
   logos: [{
     src:            "https://www.botterselburg.nl/images/botterstichting_logo.jpg",
     alt:            "Botterstichting Elburg",
     id:             "TopLogo",
     url:            "https://www.botterselburg.nl/",
   }],
-  postProcess:[respecPost],
+  postProcess:[respecPost],       //-- Deze roept de postprocessor aan
 };
 
 //-------------------------------------------------------------------------------------
 //-- Organisatie Specifieke Parameters
+//-- Nu nog oderdeel van config.je, maar hoort apart te staan
 //-------------------------------------------------------------------------------------
 var orgConfig =
 {
   orgName:          "Botterstichting Elburg",
-  urlTls:           "https://tools.geostandaarden.nl/",
+  urlTools:         "https://tools.geostandaarden.nl/",
   dirBanners:       "respec/style/logos/",
   urlPub:           "https://www.botterselburg.nl/vrijwilligers/documenten/",
-  noSOTD:           true,
-}
+  //noSOTD:           true,
+  validSpecStats: 
+  {
+    "WV":
+      {
+        txt:        "Werkversie",
+      },
+    "CV":
+      {
+        txt:        "Consultatieversie",
+      },
+    "VV":
+      {
+        txt:        "Vaststellingsversie",
+      },
+    "DF":
+      {
+        txt:        "Definitieve versie",
+      },
+  },
+  validSpecTypes: 
+  {
+    "NW":
+      {
+        txt:        "Naslagwerk",
+      },
+    "NO":
+      {
+        txt:        "Norm",
+      },
+    "ST":
+      {
+        txt:        "Standaard",
+      },
+    "IM":
+      {
+        txt:        "Informatiemodel",
+      },
+    "PR":
+      {
+        txt:        "Praktijkrichtlijn",
+      },
+    "HR":
+      {
+        txt:        "Handreiking",
+      },
+    "WA":
+      {
+        txt:        "Werkafspraak",
+      },
+    "US":
+      {
+        txt:        "Uitwisselingsstandaard",
+      },
+    "PS":
+      {
+        txt:        "Presentatiestandaard",
+      },
+    "BD":
+      {
+        txt:        "Beheerdocument",
+      },
+    "WP":
+      {
+        txt:        "Whitepaper",
+      },
+  },
 
+  //pubDomain: "bor", 	                // Beheer Openbare Ruimte
+  //pubDomain: "bro", 	                // Basisregistratie Ondergrond
+  //pubDomain: "imgeo", 	              // IMGeo / BGT
+  //pubDomain: "kl", 	                  // Kabels en Leidingen
+  //pubDomain: "liv", 	                // Landelijke Informatievoorziening Vastgoedgebruik
+  //pubDomain: "md", 	                  // Metadata
+  //pubDomain: "nen3610", 	            // Basismodel NEN3610
+  //pubDomain: "oov", 	                // Openbare Orde en Veiligheid
+  //pubDomain: "ro", 	                  // Ruimtelijke Ordening
+  //pubDomain: "serv", 	                // Services
+  //pubDomain: "visu", 	                // Visualisatie
+  //pubDomain: "wp", 	                  // White Paper
+}

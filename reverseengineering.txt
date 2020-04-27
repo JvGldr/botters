@@ -1,5 +1,5 @@
-
 <h2>Geonovum Handreiking<br>
+
     Vastgestelde versie <time class="dt-published" datetime="2020-02-04">04 februari 2020</time></h2>
     <dl>
         <dt>Deze versie:</dt>
