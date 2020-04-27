@@ -5,6 +5,10 @@
     <figcaption>EB 18 (Botter)</figcaption>
 </figure>
 
+<aside class="note">
+    Particulieer bezit
+</aside>
+
 ### Het Verhaal van de EB18 (Botter)
 
 **Geschiedenis**
@@ -21,23 +25,23 @@ Heb je meer over de historie, vul het aan!
 |---------------------------|---------------|   
 | lengte                    | 11,65  mtr    |  
 | breedte                   |  4     mtr    |  
-| diepgang 	             |  0,65  mtr    |  	 
-| kruiphoogte 	             |  1,1   mtr    |  	 
-| tonnage 		        |               |   
+| diepgang 	                |  0,65  mtr    |  	 
+| kruiphoogte 	            |  1,1   mtr    |  	 
+| tonnage 		            |               |   
 | materiaal romp 	        | hout          |   	 
 | materiaal romp (spec.)    | eiken 	    |   
 | bouwwijze romp 	        |               |   
 | seriematige bouw          |               |   		 
 | voortstuwing (oorspr.)    | zeil          |  	 
-| masthoogte 	             | 13,85  mtr    |   
-| soort tuig 	             | gaffeltuig    |  
+| masthoogte 	            | 13,85  mtr    |   
+| soort tuig 	            | gaffeltuig    |  
 | materiaal zeil 	        | katoen        |  
-| oppervlakte zeil 	        | 55 	  m2     |  
-| motortype 	             | Beta Marine   |  
+| oppervlakte zeil 	        | 55 	  m2    |  
+| motortype 	            | Beta Marine   |  
 | motorvermogen 	        | 65      pk    |  	 
-| motorbouwjaar 	        | 1997 	    |  
-| bouwjaar vaartuig 	   | 1890 	    |    
-| bouwperiode 	             | 1890-1900     |  
+| motorbouwjaar 	        | 1997 	        |  
+| bouwjaar vaartuig 	    | 1890 	        |    
+| bouwperiode 	            | 1890-1900     |  
 
 Bron: [Federatie Varend Erfgoed Nederland](https://rven.info/schip.aspx?=191)
 

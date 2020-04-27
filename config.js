@@ -79,6 +79,11 @@ var respecConfig =
   authors: 
   [
     {
+      name:       "Peter IJben",
+      company:    "Botterstichting Elburg",
+      companyURL: "https://www.botterselburg.nl",
+    }, 
+    {
       name:       "Werkgroep Communicatie",
       company:    "Botterstichting Elburg",
       companyURL: "https://www.botterselburg.nl",
@@ -91,37 +96,45 @@ var respecConfig =
   ],
   localBiblio: 
   {
-    "PUB-1":
+    "BSE":
       {
-        title:      "Titel van Publicatie-1",
-        href:       "https://www.link-naar-publicatie-1.nl",
-        status:     "V1.0.1",
-        publisher:  "Publisher-1",
-        company:    "Companynaam",
+        title:      "Website Botters Elburg",
+        href:       "https://www.botterselburg.nl",
+        status:     "",
+        publisher:  "",
+        company:    "Stichting tot behoud van de Elburger Botters",
     },
-    "PUB-2":
+    "RVEN":
       {
-        title:      "Titel van Publicatie-2",
-        href:       "https://www.link-naar-publicatie-2.nl",
-        status:     "V1.0.1",
-        publisher:  "Publisher-2",
-        company:    "Companynaam",
+        title:      "Website Register Varend Erfgoed Nederland",
+        href:       "https://https://rven.info/",
+        status:     "",
+        publisher:  "",
+        company:    "Register Varend Erfgoed Nederland",
     },
-    "PUB-3":
+    "VBN":
       {
-        title:      "Titel van Publicatie-3",
-        href:       "https://www.link-naar-publicatie-3.nl",
-        status:     "V1.0.1",
-        publisher:  "Publisher-3",
-        company:    "Companynaam",
+        title:      "Website Vereniging Botterbehoud Nederland",
+        href:       "https://www.botterbehoud.nl/",
+        status:     "",
+        publisher:  "",
+        company:    "Vereniging Botterbehoud Nederland",
     },
-    "PUB-4":
+    "WSP18":
       {
-        title:      "Titel van Publicatie-4",
-        href:       "https://www.link-naar-publicatie-4.nl",
-        status:     "V1.0.1",
-        publisher:  "Publisher-4",
-        company:    "Companynaam",
+        title:      "Website Stichting Pluut EB18",
+        href:       "http://pluuteb18.nl/",
+        status:     "",
+        publisher:  "",
+        company:    "Stichting Pluut EB18",
+    },
+    "WSB18":
+      {
+        title:      "Website Botter EB18",
+        href:       "https://www.bottereb18.nl/",
+        status:     "",
+        publisher:  "",
+        company:    "Botter EB18",
     },
   },
   logos: [{

@@ -7,6 +7,10 @@
     <figcaption>EB 18 (Pluut)</figcaption>
 </figure>
 
+<aside class="note">
+    Particulieer bezit
+</aside>
+
 ### Het Verhaal van de EB18 (Pluut)
 
 **Eerdere Eigenaren van de Pluut:**
