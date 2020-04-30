@@ -4,7 +4,9 @@
 //--              Gebaseerd op https://github.com/Geonovum/respec/wiki
 //--              Deze file moet worden neergezet in de root-directory van de 
 //--              betreffende standaard. 
+//--              In index.html wordt de file ge-include in de headersectie 
 //-- Door. . . :  Jan van Gelder
+//-- Datum . . :  Mei 2020
 //-------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------
 //-- Log . . . :  20181015 - JvG - Initiele versie 
@@ -127,13 +129,21 @@ var respecConfig =
   postProcess:[respecPost],       //-- Deze roept de postprocessor aan
 };
 
+//--===================================================================================
 //-------------------------------------------------------------------------------------
-//-- Organisatie Specifieke Parameters
-//-- Nu nog oderdeel van config.je, maar hoort apart te staan
+//-- File. . . :  config.js
+//-- Bevat . . :  Organisatie specifieke Paramters voor respec  
+//--              Deze file moet worden neergezet op een centrale plek.
+//--              In index.html wordt de file ge-include in de headersectie 
+//-- Door. . . :  Jan van Gelder
+//-- Datum . . :  Mei 2020
 //-------------------------------------------------------------------------------------
-var orgConfig =
+//-------------------------------------------------------------------------------------
+var respecParams =
 {
-  orgName:          "Botterstichting Elburg",
+  organisation:     "Botterstichting Elburg",
+  abbreviation:     "BSE",
+  committee:        "Het Bestuur van de Botterstichting Elburg",
   urlTools:         "https://tools.geostandaarden.nl/",
   dirBanners:       "respec/style/logos/",
   urlPub:           "https://www.botterselburg.nl/vrijwilligers/documenten/",

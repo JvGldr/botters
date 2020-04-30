@@ -8,7 +8,7 @@
 </figure>
 
 <aside class="note">
-    Particulieer bezit
+    Particulier bezit
 </aside>
 
 ### Het Verhaal van de EB18 (Pluut)

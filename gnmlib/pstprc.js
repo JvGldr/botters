@@ -26,15 +26,14 @@ function respecPost(respecConfig)
   removeGhPages();
   changePV();
 
-  longSpecStat();
-  longSpecType();
-
   console.log("Einde PostProcessor");
 }
 
 
+
+
 //-------------------------------------------------------------------------------------
-//-- vervang de tekst 'W3S' door orgConfig.orgName in het betreffende <h2> element 
+//-- vervang de tekst 'W3S' door respecParams.organisation in het betreffende <h2> element 
 //-------------------------------------------------------------------------------------
 function changeDocTitle()
 {
@@ -44,6 +43,9 @@ function changeDocTitle()
   //-- respecConfig.publishDate bevat datum van vandaag als niet is opgegeven in cfgfile
   var tdate = new Date(respecConfig.publishDate);
   pdate = formatDate(tdate, '-');
+
+  document.body.style.backgroundImage = "url('./media/" + respecParams.abbreviation + "-" + respecConfig.specStatus + ".svg')"; 
+  console.log(document.body.style.backgroundImage);
 
   //-- extra datumvaribelen voor op titelblad
   var mmm   = maanden[tdate.getMonth()];
@@ -58,7 +60,7 @@ function changeDocTitle()
     {
       console.log("\t\tinnerHTML [" + srch + "] is gevonden");
       //console.log("\t\tinnerHTML is [" + tags[i].innerHTML + "]");
-      tags[i].innerHTML =  orgConfig.orgName + " " + longSpecType() + "<br>" + longSpecStat() + " ";
+      tags[i].innerHTML =  respecParams.organisation + " " + longSpecType() + "<br>" + longSpecStat() + " ";
       tags[i].innerHTML += '<time class="dt-published" datetime="' + pdate + '">' + dd.slice(-2) + " " + mmm + " " + yy + '</time>';
       console.log("\t\tinnerHTML [" + tags[i].innerHTML + "] is aangepast");
       break;
@@ -107,10 +109,10 @@ function changeURLs()
       switch(t)
       {
         case 0:   //-- deze versie
-          tags[i].innerHTML = orgConfig.urlPub + sstat + "-" + respecConfig.pubDomain + "-" + respecConfig.shortName + "-" + pdate;
+          tags[i].innerHTML = respecParams.urlPub + sstat + "-" + respecConfig.pubDomain + "-" + respecConfig.shortName + "-" + pdate;
           break;
         case 1:   //-- Laatst gepubliceerde versie
-          tags[i].innerHTML = orgConfig.urlPub + respecConfig.shortName;
+          tags[i].innerHTML = respecParams.urlPub + respecConfig.shortName;
           break;
         case 2:   //-- Vorige versie
           if(odate == "19000101")   //-- Vorige versie is er niet
@@ -119,12 +121,12 @@ function changeURLs()
           }
           else
           {
-            tags[i].innerHTML = orgConfig.urlPub + pstat + "-" + respecConfig.pubDomain + "-" + respecConfig.shortName + "-"  + odate;
+            tags[i].innerHTML = respecParams.urlPub + pstat + "-" + respecConfig.pubDomain + "-" + respecConfig.shortName + "-"  + odate;
           }
           break;
       }
       tags[i].href = tags[i].innerHTML;
-      console.log("\t\tinnerHTML [" + orgConfig.urlPub + "] is aangepast en href ook");
+      console.log("\t\tinnerHTML [" + respecParams.urlPub + "] is aangepast en href ook");
 
       t++;
       if(t > 2) break;
@@ -165,21 +167,21 @@ function changeCopyRight()
             name  = "Creative Commons 0 Public Domain Dedication";
             short = "CC0";
             url   = "https://creativecommons.org/publicdomain/zero/1.0/";
-            image =  orgConfig.urlTools + orgConfig.dirBanners + "CC-Licentie.svg";
+            image =  respecParams.urlTools + respecParams.dirBanners + "CC-Licentie.svg";
             break;
 
           case "cc-by":
             name  = "Creative Commons Attribution 4.0 International Public License";
             short = "CC-BY";
             url   = "https://creativecommons.org/licenses/by/4.0/legalcode";
-            image =  orgConfig.urlTools + orgConfig.dirBanners + "cc-by.svg";
+            image =  respecParams.urlTools + respecParams.dirBanners + "cc-by.svg";
             break;
 
           case "cc-by-nd":
             name  = "Creative Commons Attribution-NoDerivatives 4.0 International Public License";
             short = "CC-BY-ND";
             url   = "https://creativecommons.org/licenses/by-nd/4.0/legalcode.nl";
-            image =  orgConfig.urlTools + orgConfig.dirBanners + "cc-by-nd.svg";
+            image =  respecParams.urlTools + respecParams.dirBanners + "cc-by-nd.svg";
             break;
 
           case "none":
@@ -270,7 +272,7 @@ function changeSOTD()
   var tag = document.getElementById(srch);
   console.log("\t\tsection is [" + tag.innerHTML + "] is gevonden");
 
-  if(orgConfig.noSOTD || sstat == "")   //-- SOTD helemaal weghalen
+  if(respecParams.noSOTD || sstat == "")   //-- SOTD helemaal weghalen
   {
     tag.parentNode.removeChild(tag);
     console.log("\t\tsection is [" + srch + "] is verwijderd");
@@ -278,44 +280,37 @@ function changeSOTD()
   else                                  //-- SOTD Aanpassen
   {
 
-    var article    = "?";
-    var typeStatus = "?";
-
     tag.innerHTML = "<h2>Status van dit document</h2>";
     tag.innerHTML += "<p>";
     
     switch(respecConfig.specStatus)
     {
       case "WV":
-        tag.innerHTML += "Dit is de definitieve versie van " + article + " " + 
-                          typeStatus.toLowerCase() + "." +
-                         "Wijzigingen naar aanleiding van consultaties zijn doorgevoerd."; 
+        tag.innerHTML +=  "Dit is de werk versie van het document '" + document.title + "'. " + 
+                          "Wijzigingen naar aanleiding van consultaties zijn doorgevoerd."; 
         break;
       case "CV":
-        tag.innerHTML += "Dit is een door de werkgroep goedgekeurde consultatieversie. " +
-                         "Commentaar over dit document kan gestuurd worden naar <a href='" +
-                         respecConfig.emailComments + "'></a>" + ".";
+        tag.innerHTML +=  "Dit is een door de werkgroep goedgekeurde consultatieversie van het document '" + document.title + "'. " + 
+                          "Commentaar over dit document kan gestuurd worden naar <a href='" + respecConfig.emailComments + "'></a>" + ".";
         break;
       case "VV":
-        tag.innerHTML += "Dit is een definitief concept van de nieuwe versie van " + article + " " + 
-                          typeStatus.toLowerCase() + "." +
+        tag.innerHTML +=  "Dit is een definitief concept van de nieuwe versie van het document '" + document.title + "'. " + 
                           "Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.";
         break;
       case "DF":
-        tag.innerHTML += "Dit is de definitieve versie van  " + article + " " + 
-                          typeStatus.toLowerCase() + "." +
-                         "Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.";
+        tag.innerHTML +=  "Dit is de definitieve versie van het document '" + document.title + "'. " + 
+                          "Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.";
           break;
     }
 
     if(respecConfig.specType == "ST" && respecConfig.specStatus == "DF")
     {
-      tag.innerHTML += "De programmaraad van Geonovum heeft deze standaard goedgekeurd.";
+      tag.innerHTML += respecParams.committee + " heeft deze standaard goedgekeurd.";
     }
 
     if(respecConfig.specType == "ST" && respecConfig.specStatus == "VV")
     {
-      tag.innerHTML +=  "De programmaraad van Geonovum beoordeelt dit definitief concept." +
+      tag.innerHTML +=  respecParams.committee + " beoordeelt dit definitief concept." +
                         "Keurt zij het goed, dan is er een nieuwe standaard.";
     }
 
@@ -368,7 +363,7 @@ function longSpecStat( )
 
   if(respecConfig.specStatus != null)      
   {
-    var sstat = orgConfig.validSpecStats[respecConfig.specStatus].txt;
+    var sstat = respecParams.validSpecStats[respecConfig.specStatus].txt;
   }
   console.log("\t\tlongSpecStat is [" + sstat + "]");
   return( sstat );
@@ -383,7 +378,7 @@ function longSpecType( )
 
   if(respecConfig.specType != null)      
   {
-    var stype = orgConfig.validSpecTypes[respecConfig.specType].txt;
+    var stype = respecParams.validSpecTypes[respecConfig.specType].txt;
   }
   console.log("\t\tLong SpecType is [" + stype + "]");
   return( stype );
