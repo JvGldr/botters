@@ -44,6 +44,7 @@ function changeDocTitle()
   var tdate = new Date(respecConfig.publishDate);
   pdate = formatDate(tdate, '-');
 
+  console.log("\t\tbackgroundImage is [" + document.body.style.backgroundImage + "]");
   document.body.style.backgroundImage = "url('./media/" + respecParams.abbreviation + "-" + respecConfig.specStatus + ".svg')"; 
   console.log(document.body.style.backgroundImage);
 
@@ -400,3 +401,4 @@ function formatDate(dt, dl)
   //console.log("\t\tdd is [" + dd + "] mm is [" + mm + "] yy = [" + yy + "] dl = [" + dl + "] -> fdate is [" + fdate + "]");
   return(fdate);
 }  
+
