@@ -5,6 +5,10 @@
     <figcaption>Bruiser</figcaption>
 </figure>
 
+<aside class="note">
+    Particulier bezit
+</aside>
+
 ### Het Verhaal van de Bruiser
 
 De botter 'Bruiser' is in 1917 gebouwd door Klaas de Haas in Monnickendam als Jachtbotter voor professor Rein Kuyper uit Amsterdam. De botter speelt een centrale rol in het boek "Zwervend langs het IJsselmeer" van zoon en schrijver Wim Kuyper. Met de 'Bruiser' maakte Wim de vele tochten op het IJsselmeer. De ervaringen en waarnemingen die hij daarbij (op)deed, staan als een historisch document, uitvoerig beschreven in zijn boek. Klaas de Haas deed in in Durgerdam, in de tijd van de fam. Kuyper ook het onderhoud aan de botter. Het schip is nog nagenoeg in originele staat. De huidige eigenaar vaart sinds 1978 met de botter.  
