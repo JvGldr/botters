@@ -303,25 +303,6 @@ function changeSOTD()
                           "Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.";
           break;
     }
-
-    if(respecConfig.specType == "ST" && respecConfig.specStatus == "DF")
-    {
-      tag.innerHTML += respecParams.committee + " heeft deze standaard goedgekeurd.";
-    }
-
-    if(respecConfig.specType == "ST" && respecConfig.specStatus == "VV")
-    {
-      tag.innerHTML +=  respecParams.committee + " beoordeelt dit definitief concept." +
-                        "Keurt zij het goed, dan is er een nieuwe standaard.";
-    }
-
-    if(respecConfig.specType == "PR" )
-    {
-      tag.innerHTML += "Dit is de definitieve versie van de praktijkrichtlijn. " + 
-                       "Een praktijkrichtlijn is een product dat informatie geeft, " +
-                       "vaak met een technisch karakter, dat nodig is voor het toepassen van een standaard. " +
-                       "Een praktijkrichtlijn hoort altijd bij een standaard/norm.";
-    }
     //Dit is een document zonder officiële status.
 
     tag.innerHTML += "<p>";
