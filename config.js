@@ -1,16 +1,12 @@
 //-------------------------------------------------------------------------------------
 //-- File. . . :  config.js
 //-- Bevat . . :  Template voor de  configuratie voor respec  
-//--              Gebaseerd op https://github.com/Geonovum/respec/wiki
 //--              Deze file moet worden neergezet in de root-directory van de 
 //--              betreffende standaard. 
 //--              In index.html wordt de file ge-include in de headersectie 
 //-- Door. . . :  Jan van Gelder
 //-- Datum . . :  Mei 2020
 //-------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------
-//-- Log . . . :  20181015 - JvG - Initiele versie 
-//-- Log . . . :  20191022 - GRK - Handreiking Archiveren ruimtelijke plannen v2.0      
 //-------------------------------------------------------------------------------------
 
 //-------------------------------------------------------------------------------------
@@ -131,7 +127,7 @@ var respecConfig =
 
 //--===================================================================================
 //-------------------------------------------------------------------------------------
-//-- File. . . :  config.js
+//-- File. . . :  params.js
 //-- Bevat . . :  Organisatie specifieke Paramters voor respec  
 //--              Deze file moet worden neergezet op een centrale plek.
 //--              In index.html wordt de file ge-include in de headersectie 
@@ -144,10 +140,10 @@ var respecParams =
   organisation:     "Botterstichting Elburg",
   abbreviation:     "BSE",
   committee:        "Het Bestuur van de Botterstichting Elburg",
-  urlTools:         "https://tools.geostandaarden.nl/",
+  urlTools:         "https://tools.geostandaarden.nl/",       //-- omdat daat de ccby logos staan
   dirBanners:       "respec/style/logos/",
   urlPub:           "https://www.botterselburg.nl/vrijwilligers/documenten/",
-  //noSOTD:           true,
+  noSOTD:           true,
   validSpecStats: 
   {
     "WV":
@@ -173,58 +169,17 @@ var respecParams =
       {
         txt:        "Naslagwerk",
       },
-    "NO":
+    "TS":
       {
-        txt:        "Norm",
+        txt:        "Technische Specificatie",
       },
-    "ST":
+    "HB":
       {
-        txt:        "Standaard",
-      },
-    "IM":
-      {
-        txt:        "Informatiemodel",
-      },
-    "PR":
-      {
-        txt:        "Praktijkrichtlijn",
-      },
-    "HR":
-      {
-        txt:        "Handreiking",
-      },
-    "WA":
-      {
-        txt:        "Werkafspraak",
-      },
-    "US":
-      {
-        txt:        "Uitwisselingsstandaard",
-      },
-    "PS":
-      {
-        txt:        "Presentatiestandaard",
-      },
-    "BD":
-      {
-        txt:        "Beheerdocument",
+        txt:        "Handboek",
       },
     "WP":
       {
         txt:        "Whitepaper",
       },
   },
-
-  //pubDomain: "bor", 	                // Beheer Openbare Ruimte
-  //pubDomain: "bro", 	                // Basisregistratie Ondergrond
-  //pubDomain: "imgeo", 	              // IMGeo / BGT
-  //pubDomain: "kl", 	                  // Kabels en Leidingen
-  //pubDomain: "liv", 	                // Landelijke Informatievoorziening Vastgoedgebruik
-  //pubDomain: "md", 	                  // Metadata
-  //pubDomain: "nen3610", 	            // Basismodel NEN3610
-  //pubDomain: "oov", 	                // Openbare Orde en Veiligheid
-  //pubDomain: "ro", 	                  // Ruimtelijke Ordening
-  //pubDomain: "serv", 	                // Services
-  //pubDomain: "visu", 	                // Visualisatie
-  //pubDomain: "wp", 	                  // White Paper
 }
