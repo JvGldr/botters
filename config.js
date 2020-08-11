@@ -15,7 +15,7 @@
 var respecConfig = 
 {
   subtitle:       "Ons Varend Erfgoed",
-  format:         "markdown",                                   
+//  format:         "markdown",                                   
   github:         "https://github.com/JvGldr/botters",
   issueBase:      "https://github.com/JvGldr/Rapport/issues",
   edDraftURI:     "https://github.com/JvGldr/botters",

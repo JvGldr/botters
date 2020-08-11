@@ -1,9 +1,4 @@
-<!DOCTYPE html><html lang="nl">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta charset="utf-8">
-    <meta name="generator" content="ReSpec 25.6.2">
-    <style>.issue-label{text-transform:initial}.warning>p:first-child{margin-top:0}.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}span.warning{padding:.1em .5em .15em}.issue.closed span.issue-number{text-decoration:line-through}.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}li.task-list-item{list-style:none}input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}</style>
+<!DOCTYPE html><html lang="nl"><head><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta charset="utf-8"><meta name="generator" content="ReSpec 25.13.0"><style>.issue-label{text-transform:initial}.warning>p:first-child{margin-top:0}.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}span.warning{padding:.1em .5em .15em}.issue.closed span.issue-number{text-decoration:line-through}.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}li.task-list-item{list-style:none}input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}</style><style>dfn{cursor:pointer}.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}.dfn-panel *{margin:0}.dfn-panel b{display:block;color:#000;margin-top:.25em}.dfn-panel ul a[href]{color:#333}.dfn-panel a.self-link{font-weight:700}.dfn-panel .dfn-exported{float:right;padding:.1em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;background:#d1edfd;color:#040b1c;box-shadow:0 0 0 .125em #1ca5f940}.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}.dfn-panel a[href]:hover{border-bottom-width:1px}.dfn-panel ul{padding:0}.dfn-panel li{margin-left:1em}.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}</style>
         
         <meta content="text/html; charset=utf-8" http-equiv="content-type">
             
@@ -13,16 +8,10 @@
         
         
         
-    <style id="respec-mainstyle">
-      @keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}
-    </style>
-    <meta name="description" content="Dit document bevat de verhalen van de vloot van de Elburger Botterstichting, en schepen met een Elburgs visserijnummer die Elburg als thuishaven hebben.Het document is primair bedoeld voor de vrijwilligers waarop de Stichting drijft. Het biedt een compact 
-overzicht van de wetenswaardigheden van schepen.">
-<link rel="canonical" href="https://www.w3.org/TR/vlt/">
-<style>.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}.hljs-comment,.hljs-quote{color:#717277;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}.hljs-literal{color:#0b76c5}.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}</style><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style>
-<script id="initialUserConfig" type="application/json">{
+        
+    <style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style><meta name="description" content="Dit document bevat de verhalen van de vloot van de Elburger Botterstichting, en schepen met een Elburgs visserijnummer die Elburg als thuishaven hebben.Het document is primair bedoeld voor de vrijwilligers waarop de Stichting drijft. Het biedt een compact 
+overzicht van de wetenswaardigheden van schepen."><link rel="canonical" href="https://www.w3.org/TR/vlt/"><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
   "subtitle": "Ons Varend Erfgoed",
-  "format": "markdown",
   "github": "https://github.com/JvGldr/botters",
   "issueBase": "https://github.com/JvGldr/Rapport/issues",
   "edDraftURI": "https://github.com/JvGldr/botters",
@@ -108,31 +97,28 @@ overzicht van de wetenswaardigheden van schepen.">
   "postProcess": [
     null
   ],
-  "publishISODate": "2020-05-05T00:00:00.000Z",
-  "generatedSubtitle": "undefined 05 May 2020"
+  "publishISODate": "2020-08-11T00:00:00.000Z",
+  "generatedSubtitle": "undefined 11 August 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WV"></head>
 
     
     
     
-    <body class="h-entry informative"><div class="head">
-    <a class="logo" href="https://www.botterselburg.nl/"><img id="TopLogo" alt="Botterstichting Elburg" src="https://www.botterselburg.nl/images/botterstichting_logo.jpg" width="500" height="101"></a> <h1 id="title" class="title">De Vloot</h1>
+    <body class="h-entry informative" style="background-image: url(&quot;./media/BSE-WV.svg&quot;);"><div class="head">
+    <a class="logo" href="https://www.botterselburg.nl/"><img id="TopLogo" alt="Botterstichting Elburg" src="https://www.botterselburg.nl/images/botterstichting_logo.jpg"></a> <h1 id="title" class="title">De Vloot</h1>
     <h2 id="subtitle" class="subtitle">Ons Varend Erfgoed</h2>
-    <h2>
-      W3C 
-      <time class="dt-published" datetime="2020-05-05">05 May 2020</time>
-    </h2>
+    <h2>Botterstichting Elburg Naslagwerk<br>Werkversie <time class="dt-published" datetime="2020-08-11">11 augustus 2020</time></h2>
     <dl>
       <dt>Deze versie:</dt><dd>
-              <a class="u-url" href="https://www.w3.org/TR/2020/WV-vlt-20200505/">https://www.w3.org/TR/2020/WV-vlt-20200505/</a>
+              <a class="u-url" href="https://www.botterselburg.nl/vrijwilligers/documenten/wv-opl-vlt-20200811">https://www.botterselburg.nl/vrijwilligers/documenten/wv-opl-vlt-20200811</a>
             </dd><dt>Laatst gepubliceerde versie:</dt><dd>
-              <a href="https://www.w3.org/TR/vlt/">https://www.w3.org/TR/vlt/</a>
+              <a href="https://www.botterselburg.nl/vrijwilligers/documenten/vlt">https://www.botterselburg.nl/vrijwilligers/documenten/vlt</a>
             </dd>
       <dt>Laatste werkversie:</dt><dd><a href="https://github.com/JvGldr/botters">https://github.com/JvGldr/botters</a></dd>
       
       
       
-      <dt>Previous version:</dt><dd><a href="https://www.w3.org/TR/1900/WV-vlt-19000101/">https://www.w3.org/TR/1900/WV-vlt-19000101/</a></dd>
+      <dt>Vorige Versie:</dt><dd><a href=""></a></dd>
       
       <dt>Redacteur:</dt>
       <dd class="p-author h-card vcard"><span class="p-name fn">Jan van Gelder</span>
@@ -153,7 +139,7 @@ overzicht van de wetenswaardigheden van schepen.">
   </dd><dd>
     <a href="https://github.com/JvGldr/botters/issues/">Dien een melding in</a>
   </dd><dd>
-    <a href="https://github.com/JvGldr/botters/commits/gh-pages">Revisiehistorie</a>
+    <a href="https://github.com/JvGldr/botters/commits/">Revisiehistorie</a>
   </dd><dd>
     <a href="https://github.com/JvGldr/botters/pulls/">Pull requests</a>
   </dd>
@@ -161,20 +147,10 @@ overzicht van de wetenswaardigheden van schepen.">
     
     
     
-    <p class="copyright">
-    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-    ©
-    2020
-    
-    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
-    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
-    apply.
-  </p>
+    <p class="copyright"><dl><dt>Rechtenbeleid:</dt><dd><div class="copyright" style="margin: 0.25em 0;"><abbr title="Creative Commons Attribution-NoDerivatives 4.0 International Public License"><a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode.nl"><img src="https://tools.geostandaarden.nl/respec/style/logos/cc-by-nd.svg" alt="Creative Commons Attribution-NoDerivatives 4.0 International Public License" width="115" height="40"></a></abbr><div style="display:inline-block; vertical-align:top"><p style="font-size: small;">Creative Commons Attribution-NoDerivatives 4.0 International Public License<br>(CC-BY-ND)</p></div></div></dd></dl></p>
     <hr title="Separator for header">
-  </div><section id="abstract" data-format="markdown" class="introductory"><h2>Samenvatting</h2><p>Dit document bevat de <em>verhalen</em> van de vloot van de <a href="https://www.botterselburg.nl">Elburger Botterstichting</a>, en schepen met een Elburgs visserijnummer die Elburg als thuishaven hebben.<br>Het document is primair bedoeld voor de vrijwilligers waarop de Stichting drijft. Het biedt een compact 
+  </div>
+        <section id="abstract" data-format="markdown" class="introductory"><h2>Samenvatting</h2><p>Dit document bevat de <em>verhalen</em> van de vloot van de <a href="https://www.botterselburg.nl">Elburger Botterstichting</a>, en schepen met een Elburgs visserijnummer die Elburg als thuishaven hebben.<br>Het document is primair bedoeld voor de vrijwilligers waarop de Stichting drijft. Het biedt een compact 
 overzicht van de wetenswaardigheden van schepen.</p><p>Als bronnen zijn gebruikt de <a href="https://www.botterselburg.nl">website</a> van de Stichting zelf, de website van de <a href="https://rven.info/index.aspx">Federatie Varend Erfgoed Nederland</a>, de website van de <a href="http://www.botterbehoud.nl/schepen/">Vereniging Botterbehoud</a>, de website van de <a href="http://pluuteb18.nl/">Stichting Pluut EB18</a>, en de <a href="https://www.bottereb18.nl/">Botter EB18</a>, en de website van de <a href="http://www.eb65.nl">EB65</a>.</p><p>Via de links in deze tabel kan snel naar de pagina van het betreffende schip worden gesprongen.</p><p>In deze tabel de schepen van de Elburger Botterstichting:</p><table>
 <thead>
 <tr>
@@ -277,43 +253,9 @@ overzicht van de wetenswaardigheden van schepen.</p><p>Als bronnen zijn gebruikt
 <td><a href="#het-verhaal-van-de-bruiser">verhaal</a></td>
 <td><a href="#de-gegevens-van-de-bruiser">gegevens</a></td>
 </tr>
-</tbody></table></section><section id="sotd" class="introductory"><h2>Status van dit document</h2><p><em>This section describes the status of this
-      document at the time of its publication. Other documents may supersede
-      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
-      of this technical report can be found in the
-      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
-      https://www.w3.org/TR/.</em></p><p>
-    <a href="https://github.com/JvGldr/Rapport/issues">GitHub Issues</a> are preferred for
-          discussion of this specification.
-        
-    
-  </p><p>
-    Publication as a  does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
-    Membership. This is a draft document and may be updated, replaced or
-    obsoleted by other documents at any time. It is inappropriate to cite this
-    document as other than work in progress.
-  </p><p>
-    
-        This document was produced by a group
-        operating under the
-        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-       
-    
-                <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
-                <a rel="disclosure" href="">public list of any patent disclosures</a>
-          made in connection with the deliverables of
-          the group; that page also includes
-          instructions for disclosing a patent. An individual who has actual
-          knowledge of a patent which the individual believes contains
-          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-          must disclose the information in accordance with
-          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-        
-    
-  </p><p>
-                  This document is governed by the
-                  <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                </p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#de-eb1"><bdi class="secno">1. </bdi>De EB1</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb1"><bdi class="secno">1.1 </bdi>Het Verhaal van de EB1</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb1"><bdi class="secno">1.2 </bdi>De Gegevens van de EB1</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb15"><bdi class="secno">2. </bdi>De EB15</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb15"><bdi class="secno">2.1 </bdi>Het Verhaal van de EB15</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb15"><bdi class="secno">2.2 </bdi>De Gegevens van de EB15</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb17"><bdi class="secno">3. </bdi>De EB17</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb17"><bdi class="secno">3.1 </bdi>Het Verhaal van de EB17</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb17"><bdi class="secno">3.2 </bdi>De Gegevens van de EB17</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb24"><bdi class="secno">4. </bdi>De EB24</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb24"><bdi class="secno">4.1 </bdi>Het Verhaal van de EB24</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb24"><bdi class="secno">4.2 </bdi>De Gegevens van de EB24</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb29"><bdi class="secno">5. </bdi>De EB29</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb29"><bdi class="secno">5.1 </bdi>Het Verhaal van de EB29</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb29"><bdi class="secno">5.2 </bdi>De Gegevens van de EB29</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb39"><bdi class="secno">6. </bdi>De EB39</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb39"><bdi class="secno">6.1 </bdi>Het Verhaal van de EB39</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb39"><bdi class="secno">6.2 </bdi>De Gegevens van de EB39</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb43"><bdi class="secno">7. </bdi>De EB43</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb43"><bdi class="secno">7.1 </bdi>Het Verhaal van de EB43</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb43"><bdi class="secno">7.2 </bdi>De Gegevens van de EB43</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb47"><bdi class="secno">8. </bdi>De EB47</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb47"><bdi class="secno">8.1 </bdi>Het Verhaal van de EB47</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb47"><bdi class="secno">8.2 </bdi>De Gegevens van de EB47</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb68"><bdi class="secno">9. </bdi>De EB68</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb68"><bdi class="secno">9.1 </bdi>Het Verhaal van de EB68</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb68"><bdi class="secno">9.2 </bdi>De Gegevens van de EB68</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb18-pluut"><bdi class="secno">10. </bdi>De EB18 (Pluut)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb18-pluut"><bdi class="secno">10.1 </bdi>Het Verhaal van de EB18 (Pluut)</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb18-pluut"><bdi class="secno">10.2 </bdi>De Gegevens van de EB18 (Pluut)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb18-botter"><bdi class="secno">11. </bdi>De EB18 (Botter)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb18-botter"><bdi class="secno">11.1 </bdi>Het Verhaal van de EB18 (Botter)</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb18-botter"><bdi class="secno">11.2 </bdi>De Gegevens van de EB18 (Botter)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb46"><bdi class="secno">12. </bdi>De EB46</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb46"><bdi class="secno">12.1 </bdi>Het Verhaal van de EB46</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb46"><bdi class="secno">12.2 </bdi>De Gegevens van de EB46</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb65"><bdi class="secno">13. </bdi>De EB65</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb65"><bdi class="secno">13.1 </bdi>Het Verhaal van de EB65</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb65"><bdi class="secno">13.2 </bdi>De Gegevens van de EB65</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-bruiser"><bdi class="secno">14. </bdi>De Bruiser</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-bruiser"><bdi class="secno">14.1 </bdi>Het Verhaal van de Bruiser</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-bruiser"><bdi class="secno">14.2 </bdi>De Gegevens van de Bruiser</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">15. </bdi>Lijst met figuren</a></li></ol></nav><section data-format="markdown" id="de-eb1"><h2 id="x1-de-eb1"><bdi class="secno">1. </bdi>De EB1</h2><figure id="foto_eb1">
+</tbody></table></section>
+        <nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#de-eb1"><bdi class="secno">1. </bdi>De EB1</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb1"><bdi class="secno">1.1 </bdi>Het Verhaal van de EB1</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb1"><bdi class="secno">1.2 </bdi>De Gegevens van de EB1</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb15"><bdi class="secno">2. </bdi>De EB15</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb15"><bdi class="secno">2.1 </bdi>Het Verhaal van de EB15</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb15"><bdi class="secno">2.2 </bdi>De Gegevens van de EB15</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb17"><bdi class="secno">3. </bdi>De EB17</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb17"><bdi class="secno">3.1 </bdi>Het Verhaal van de EB17</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb17"><bdi class="secno">3.2 </bdi>De Gegevens van de EB17</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb24"><bdi class="secno">4. </bdi>De EB24</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb24"><bdi class="secno">4.1 </bdi>Het Verhaal van de EB24</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb24"><bdi class="secno">4.2 </bdi>De Gegevens van de EB24</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb29"><bdi class="secno">5. </bdi>De EB29</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb29"><bdi class="secno">5.1 </bdi>Het Verhaal van de EB29</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb29"><bdi class="secno">5.2 </bdi>De Gegevens van de EB29</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb39"><bdi class="secno">6. </bdi>De EB39</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb39"><bdi class="secno">6.1 </bdi>Het Verhaal van de EB39</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb39"><bdi class="secno">6.2 </bdi>De Gegevens van de EB39</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb43"><bdi class="secno">7. </bdi>De EB43</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb43"><bdi class="secno">7.1 </bdi>Het Verhaal van de EB43</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb43"><bdi class="secno">7.2 </bdi>De Gegevens van de EB43</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb47"><bdi class="secno">8. </bdi>De EB47</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb47"><bdi class="secno">8.1 </bdi>Het Verhaal van de EB47</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb47"><bdi class="secno">8.2 </bdi>De Gegevens van de EB47</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb68"><bdi class="secno">9. </bdi>De EB68</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb68"><bdi class="secno">9.1 </bdi>Het Verhaal van de EB68</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb68"><bdi class="secno">9.2 </bdi>De Gegevens van de EB68</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb18-pluut"><bdi class="secno">10. </bdi>De EB18 (Pluut)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb18-pluut"><bdi class="secno">10.1 </bdi>Het Verhaal van de EB18 (Pluut)</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb18-pluut"><bdi class="secno">10.2 </bdi>De Gegevens van de EB18 (Pluut)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb18-botter"><bdi class="secno">11. </bdi>De EB18 (Botter)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb18-botter"><bdi class="secno">11.1 </bdi>Het Verhaal van de EB18 (Botter)</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb18-botter"><bdi class="secno">11.2 </bdi>De Gegevens van de EB18 (Botter)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb46"><bdi class="secno">12. </bdi>De EB46</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb46"><bdi class="secno">12.1 </bdi>Het Verhaal van de EB46</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb46"><bdi class="secno">12.2 </bdi>De Gegevens van de EB46</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-eb65"><bdi class="secno">13. </bdi>De EB65</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-eb65"><bdi class="secno">13.1 </bdi>Het Verhaal van de EB65</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-eb65"><bdi class="secno">13.2 </bdi>De Gegevens van de EB65</a></li></ol></li><li class="tocline"><a class="tocxref" href="#de-bruiser"><bdi class="secno">14. </bdi>De Bruiser</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-verhaal-van-de-bruiser"><bdi class="secno">14.1 </bdi>Het Verhaal van de Bruiser</a></li><li class="tocline"><a class="tocxref" href="#de-gegevens-van-de-bruiser"><bdi class="secno">14.2 </bdi>De Gegevens van de Bruiser</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">15. </bdi>Lijst met figuren</a></li></ol></nav>  
+        <section data-format="markdown" id="de-eb1"><h2 id="x1-de-eb1"><bdi class="secno">1. </bdi>De EB1</h2><figure id="foto_eb1">
     <img src="media/eb1.jpg" alt="EB 1" width="518" height="491">
     <figcaption>Figuur <bdi class="figno">1</bdi> <span class="fig-title">EB 1</span></figcaption>
 </figure><section id="het-verhaal-van-de-eb1"><h3 id="x1-1-het-verhaal-van-de-eb1"><bdi class="secno">1.1 </bdi>Het Verhaal van de EB1</h3><p>In mei 1938 koopt Jan aan ‘t Goor de Marker botter MK 81 voor Fl. 210,- van de gebroeders Zeeman te Marken. 
@@ -427,7 +369,8 @@ vloog en men, wonder boven wonder, zonder noemenswaardige schade aan het vuur on
 <td>bouwperiode</td>
 <td>1880-1890</td>
 </tr>
-</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=1181">Federatie Varend Erfgoed Nederland</a></p></section></section><section data-format="markdown" id="de-eb15"><h2 id="x2-de-eb15"><bdi class="secno">2. </bdi>De EB15</h2><figure id="foto_eb15">
+</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=1181">Federatie Varend Erfgoed Nederland</a></p></section></section>  
+        <section data-format="markdown" id="de-eb15"><h2 id="x2-de-eb15"><bdi class="secno">2. </bdi>De EB15</h2><figure id="foto_eb15">
     <img src="media/eb15.jpg" alt="EB 15" width="244" height="207">
     <figcaption>Figuur <bdi class="figno">2</bdi> <span class="fig-title">EB 15</span></figcaption>
 </figure><section id="het-verhaal-van-de-eb15"><h3 id="x2-1-het-verhaal-van-de-eb15"><bdi class="secno">2.1 </bdi>Het Verhaal van de EB15</h3><p>Het verhaal van de EB 15 is bijzonder. Het schip was vanaf 1922 eigendom van Peter van der Heide, een bekende 
@@ -452,14 +395,12 @@ Bij een eerdere reddingspoging is het schip ingepakt in ijzer. 'Als dat niet was
 zo schat Leusink in. 'In de tijd dat de EB 15 op de wal heeft gestaan, is er al twee keer brand aan boord 
 geweest, dus is het schip alleen maar verder afgetakeld. De ijzeren 'jas' van de EB 15 kan Leusink goed 
 gebruiken voor de maatvoering van het schip. 'Maar we gaan natuurlijk weer een houten schip bouwen.'</p><p>Bron: <a href="https://botterselburg.nl/pagina_output.php?id=21">Website Botterstichting Elburg</a></p><div class="hhulst">
-
-
-<p>De moeder van Margrieta Kroese, Eib was een dochter van Peter v/der Heide en werkte toendertijd bij mijn ouders,dus de link met de 15 was gauw gelegd.<br>Ik mocht toen 4 á 5 keer s'nachts mee, een hele belevenis voor een jong van 10/11 jaar, veel zeeziek dat weet ik nog wel.
-Maar een onuitwisbare herinnering dat was het!</p>
+De moeder van Margrieta Kroese, Eib was een dochter van Peter v/der Heide en werkte toendertijd bij mijn ouders,dus de link met de 15 was gauw gelegd.  
+Ik mocht toen 4 á 5 keer s'nachts mee, een hele belevenis voor een jong van 10/11 jaar, veel zeeziek dat weet ik nog wel.
+Maar een onuitwisbare herinnering dat was het!
 </div><div class="hhulst">
-
-
-<p>Ook weet ik nog dat 's morgens om 8 uur de bel ging en "ome Peter" op de stoep stond om een wasmachientje te kopen, had ie in 1 nacht verdiend door met storm weer binnen de "Lijn" dus verboden gebied, te vissen.<br>Hij was die nacht alleen op zee,de hele vloot lag vanwege de storm binnen.</p>
+Ook weet ik nog dat 's morgens om 8 uur de bel ging en "ome Peter" op de stoep stond om een wasmachientje te kopen, had ie in 1 nacht verdiend door met storm weer binnen de "Lijn" dus verboden gebied, te vissen.  
+Hij was die nacht alleen op zee,de hele vloot lag vanwege de storm binnen.
 </div></section><section id="de-gegevens-van-de-eb15"><h3 id="x2-2-de-gegevens-van-de-eb15"><bdi class="secno">2.2 </bdi>De Gegevens van de EB15</h3><table>
 <thead>
 <tr>
@@ -543,7 +484,8 @@ Maar een onuitwisbare herinnering dat was het!</p>
 <td>bouwperiode</td>
 <td>1900-1910</td>
 </tr>
-</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=2937">Federatie Varend Erfgoed Nederland</a></p></section></section><section data-format="markdown" id="de-eb17"><h2 id="x3-de-eb17"><bdi class="secno">3. </bdi>De EB17</h2><figure id="foto_eb17">
+</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=2937">Federatie Varend Erfgoed Nederland</a></p></section></section>  
+        <section data-format="markdown" id="de-eb17"><h2 id="x3-de-eb17"><bdi class="secno">3. </bdi>De EB17</h2><figure id="foto_eb17">
     <img src="media/eb17.jpg" alt="EB 17" width="780" height="522">
     <figcaption>Figuur <bdi class="figno">3</bdi> <span class="fig-title">EB 17</span></figcaption>
 </figure><section id="het-verhaal-van-de-eb17"><h3 id="x3-1-het-verhaal-van-de-eb17"><bdi class="secno">3.1 </bdi>Het Verhaal van de EB17</h3><p>De EB 17 Is gebouwd in 1918 in opdracht van Hannes aan ’t Goor. Aan ’t Goor was op dat moment al in het bezit 
@@ -565,9 +507,8 @@ de geheel gerestaureerde botter EB 17 feestelijk te water gelaten.
 In 1999 verwisselde de botter van eigenaar en ging Theo Kuipers uit Wijdenes met de botter varen. Totdat in 
 2006 Sjouke Berga uit Elburg de boot weer terug bracht naar haar oorspronkelijke haven. In 2010 vertrok Berga 
 uit het land en verkocht de EB 17 aan de <a href="https://www.botterselburg.nl">Stichting tot Behoud van&nbsp;Elburger Botters</a>.</p><p>Bron: <a href="https://botterselburg.nl/pagina_output.php?id=21">Website Botterstichting Elburg</a></p><div class="hhulst">
-
-
-<p>Jan Willem Stofberg verkreeg de botter voor 1 ouwerwetse gulden...<br>Wim Hoeve schoot het geld voor en kreeg het jaren later volledig van de club terugbetaald...</p>
+Jan Willem Stofberg verkreeg de botter voor 1 ouwerwetse gulden...  
+Wim Hoeve schoot het geld voor en kreeg het jaren later volledig van de club terugbetaald...
 </div></section><section id="de-gegevens-van-de-eb17"><h3 id="x3-2-de-gegevens-van-de-eb17"><bdi class="secno">3.2 </bdi>De Gegevens van de EB17</h3><table>
 <thead>
 <tr>
@@ -651,7 +592,8 @@ uit het land en verkocht de EB 17 aan de <a href="https://www.botterselburg.nl">
 <td>bouwperiode</td>
 <td>1910-1920</td>
 </tr>
-</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=1753">Federatie Varend Erfgoed Nederland</a></p></section></section><section data-format="markdown" id="de-eb24"><h2 id="x4-de-eb24"><bdi class="secno">4. </bdi>De EB24</h2><p><em>Ons vlaggenschip waar het allemaal mee begon!</em></p><figure id="foto_eb24">
+</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=1753">Federatie Varend Erfgoed Nederland</a></p></section></section>  
+        <section data-format="markdown" id="de-eb24"><h2 id="x4-de-eb24"><bdi class="secno">4. </bdi>De EB24</h2><p><em>Ons vlaggenschip waar het allemaal mee begon!</em></p><figure id="foto_eb24">
     <img src="media/eb24.jpg" alt="EB 24" width="624" height="424">
     <figcaption>Figuur <bdi class="figno">4</bdi> <span class="fig-title">EB 24</span></figcaption>
 </figure><section id="het-verhaal-van-de-eb24"><h3 id="x4-1-het-verhaal-van-de-eb24"><bdi class="secno">4.1 </bdi>Het Verhaal van de EB24</h3><p>De botter EB 24 werd in 1916 gebouwd op de werf van Oost in Harderwijk in opdracht van Aart Jansen (Aart van 
@@ -696,15 +638,14 @@ opgebouwd worden en omdat hij toch binnen lag, werd hij meteen maar gelakt en ge
 vaarseizoen 2000.
 De laatste restauratie heeft in 2016/2017 plaatsgevonden. Omdat de hele geschiedenis van de Botterstichting 
 met de EB 24 begon, is zij het vlaggenschip van de stichting.</p><p>Bron: <a href="https://botterselburg.nl/pagina_output.php?id=21">Website Botterstichting Elburg</a></p><div class="hhulst">
-
-
-<p>In 1975 was de eerste Sail,omdat de mast er nog niet opstond mochten we niet deelnemen aan het evenement. We hebben toen een uitzondering weten te bewerkstelligen,namelijk: de "werkschip" functie, de zwaarden werden door Tolman uit Monnikendam gemaakt, dus 2 vliegen in een klap.<br>De tocht er naar toe werd samen met de boeier de "Njord" van de fam.Offringa aan elkaar geknoopt gemaakt.
+In 1975 was de eerste Sail,omdat de mast er nog niet opstond mochten we niet deelnemen aan het evenement. We hebben toen een uitzondering weten te bewerkstelligen,namelijk: de "werkschip" functie, de zwaarden werden door Tolman uit Monnikendam gemaakt, dus 2 vliegen in een klap.  
+De tocht er naar toe werd samen met de boeier de "Njord" van de fam.Offringa aan elkaar geknoopt gemaakt.
 Wegbrengers waren Gart v/der Heide(de vader van Peter) Andries Hoefhamer,Jacob Hulst,Visscher broer v/de olde Koake en de oprichters,onderweg werd nog een grote drijvende licht opstand overvaren,maar omdat de 24 onderwater in het ijzer zat onstond er tot onze grote verbazing geen schipbreuk.
 De mast hebben we uit het museum in Ketelhaven teruggehaald onder voorwaarde dat hij weer op de 24 gezet zou worden,uiteraard.
 Gerald de Weerd was toen directeur daar, later is hij bekend geworden door de bouw van de replica van het schip waarmee Willem Barends naar Nova Zembla is gezeild en daar verongelukt.
 Wat de Samofa betreft,nog steeds grote dank verschuldigd aan Wim van Rheenen die indertijd samen met Niko Verwij veel werk heeft verricht om ze aan de praat te houden,we hadden toen nog geen reserve motoren,en via allerlei slinkse wegen werden onderdelen op de kop getikt en in een week tijd werd  de hele motor totaal gereviseerd.
 Bedenk wel we waren toen allemaal aan het werk,en dat moest er eventjes tussendoor,we hadden geen inkomsten,er werd toen al druk verhuur gevaren met de twee oud visschers Jan van Pad en Jan van Mies (Mies was de dochter van Peter v/der Heide van de 15en getrouwd met Jan Jansen).
-Voordat de trog werd aangepakt hebben op de helling van Balk met Paasen 1975 samen met Goosen Zwep (de smid) en Henk Witter op aanwijzing van Daan Balk senior achterin wat spanten en inhouten vernieuwd.</p>
+Voordat de trog werd aangepakt hebben op de helling van Balk met Paasen 1975 samen met Goosen Zwep (de smid) en Henk Witter op aanwijzing van Daan Balk senior achterin wat spanten en inhouten vernieuwd.
 </div></section><section id="de-gegevens-van-de-eb24"><h3 id="x4-2-de-gegevens-van-de-eb24"><bdi class="secno">4.2 </bdi>De Gegevens van de EB24</h3><table>
 <thead>
 <tr>
@@ -788,7 +729,8 @@ Voordat de trog werd aangepakt hebben op de helling van Balk met Paasen 1975 sam
 <td>bouwperiode</td>
 <td>1910-1920</td>
 </tr>
-</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=501">Federatie Varend Erfgoed Nederland</a></p></section></section><section data-format="markdown" id="de-eb29"><h2 id="x5-de-eb29"><bdi class="secno">5. </bdi>De EB29</h2><figure id="foto_eb29">
+</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=501">Federatie Varend Erfgoed Nederland</a></p></section></section>
+        <section data-format="markdown" id="de-eb29"><h2 id="x5-de-eb29"><bdi class="secno">5. </bdi>De EB29</h2><figure id="foto_eb29">
     <img src="media/eb29.jpg" alt="EB 29" width="1181" height="789">
     <figcaption>Figuur <bdi class="figno">5</bdi> <span class="fig-title">EB 29</span></figcaption>
 </figure><section id="het-verhaal-van-de-eb29"><h3 id="x5-1-het-verhaal-van-de-eb29"><bdi class="secno">5.1 </bdi>Het Verhaal van de EB29</h3><p>De EB-29 is op de werf van De Haas in Monnickendam als laatste schip gebouwd voor de familie Van Triest
@@ -823,11 +765,9 @@ Het doel van het Leer- werkproject is meerledig: ten eerste de overdracht van ke
 ambacht van scheepsrestaurateur- timmerman. Ten tweede mensen met een afstand tot de arbeidsmarkt weer 
 arbeidsritme op te laten doen. En ten derde stagemogelijkheden bieden aan toekomstige scheepstimmerlui.
 Tijdens de botterdagen van september 2012 werd de EB 29 weer in volle glorie feestelijk te water gelaten.</p><p>Bron: <a href="https://botterselburg.nl/pagina_output.php?id=21">Website Botterstichting Elburg</a></p><div class="hhulst">
-
-
-<p>Ik vond de botter ik denk nu 35 jaar geleden in een loods van Op Zeeland in Haarlem,later hoorde ik dat Pils (het ook gehoord had,dus meeuwen op de beug (concurentie) dus.
+Ik vond de botter ik denk nu 35 jaar geleden in een loods van Op Zeeland in Haarlem,later hoorde ik dat Pils (het ook gehoord had,dus meeuwen op de beug (concurentie) dus.
 Maar zoals jullie gelezen hebben,Pils (Jan Willem Stofberg, red.) kreeg de 17 in handen en wij hadden geen concurrentie. Na veel heen en weer gepraat (dat heeft 20 jaar geduurd) groen licht.
-Met een dieplader door Co van Twillert voorgeschoten (en later keurig door ons terugbetaald) naar Elburg vervoerd en op de ouwe bleek opgeslagen. Het vervolg lezen jullie hierboven.</p>
+Met een dieplader door Co van Twillert voorgeschoten (en later keurig door ons terugbetaald) naar Elburg vervoerd en op de ouwe bleek opgeslagen. Het vervolg lezen jullie hierboven.
 </div></section><section id="de-gegevens-van-de-eb29"><h3 id="x5-2-de-gegevens-van-de-eb29"><bdi class="secno">5.2 </bdi>De Gegevens van de EB29</h3><table>
 <thead>
 <tr>
@@ -911,7 +851,8 @@ Met een dieplader door Co van Twillert voorgeschoten (en later keurig door ons t
 <td>bouwperiode</td>
 <td>1910-1920</td>
 </tr>
-</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=1810">Federatie Varend Erfgoed Nederland</a></p></section></section><section data-format="markdown" id="de-eb39"><h2 id="x6-de-eb39"><bdi class="secno">6. </bdi>De EB39</h2><p><em>Geen Botter maar een Bons!</em></p><figure id="foto_eb39">
+</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=1810">Federatie Varend Erfgoed Nederland</a></p></section></section>
+        <section data-format="markdown" id="de-eb39"><h2 id="x6-de-eb39"><bdi class="secno">6. </bdi>De EB39</h2><p><em>Geen Botter maar een Bons!</em></p><figure id="foto_eb39">
     <img src="media/eb39.jpg" alt="EB 39" width="1000" height="1500">
     <figcaption>Figuur <bdi class="figno">6</bdi> <span class="fig-title">EB 39</span></figcaption>
 </figure><section id="het-verhaal-van-de-eb39"><h3 id="x6-1-het-verhaal-van-de-eb39"><bdi class="secno">6.1 </bdi>Het Verhaal van de EB39</h3><p>De EB 39 is een bons, één van de weinige nog overgebleven schepen van dit type. Dit soort schepen werd in 
@@ -1027,13 +968,13 @@ De bons is sinds 20 december 2005 toegevoegd aan de vloot van de Stichting tot B
 <td>bouwperiode</td>
 <td>1910-1920</td>
 </tr>
-</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=1182">Federatie Varend Erfgoed Nederland</a></p></section></section><section data-format="markdown" id="de-eb43"><h2 id="x7-de-eb43"><bdi class="secno">7. </bdi>De EB43</h2><figure id="foto_eb43">
+</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=1182">Federatie Varend Erfgoed Nederland</a></p></section></section>
+        <section data-format="markdown" id="de-eb43"><h2 id="x7-de-eb43"><bdi class="secno">7. </bdi>De EB43</h2><figure id="foto_eb43">
     <img src="media/eb43.jpg" alt="EB 43" width="720" height="660">
     <figcaption>Figuur <bdi class="figno">7</bdi> <span class="fig-title">EB 43</span></figcaption>
 </figure><div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Noot</span></div><aside class="">
-
-
-<pre><code aria-busy="false" class="hljs">Particulier bezit</code></pre></aside></div><section id="het-verhaal-van-de-eb43"><h3 id="x7-1-het-verhaal-van-de-eb43"><bdi class="secno">7.1 </bdi>Het Verhaal van de EB43</h3><p>De EB 43 werd in 1913 in Huizen gebouwd bij de werf van Schaap in opdracht van Kees van der Poel, bijgenaamd de Koeter, voor een bedrag van Fl. 2800,-.
+    Particulier bezit
+</aside></div><section id="het-verhaal-van-de-eb43"><h3 id="x7-1-het-verhaal-van-de-eb43"><bdi class="secno">7.1 </bdi>Het Verhaal van de EB43</h3><p>De EB 43 werd in 1913 in Huizen gebouwd bij de werf van Schaap in opdracht van Kees van der Poel, bijgenaamd de Koeter, voor een bedrag van Fl. 2800,-.
 Tot 1922 viste zij onder het nummer HZ 62. In dat jaar kocht Willem van Triest (de Taaie) deze botter voor een bedrag van Fl. 2400,- en kreeg het nummer EB 43. Willem voer als koopschuit voor zijn broer Aart, die vishandelaar was en kocht op zee met name bot en haring van de vissers. Zo nu en dan haalde hij ook een vrachtje kool uit Broekerhaven voor groentehandelaar Hendrik Binnenkamp. Tussentijds werd er ook met de EB 43 gekuild.<br>In november 1928 werd de schuit eigendom van Willem’s broer Aart, en Willem werd zetschipper op de EB 43. In december van dat jaar werd de botter van een motor voorzien.
 Na de afsluiting van de Zuiderzee verdwenen de haring en de bot en was er geen behoefte meer aan koopschuiten. Voor Fl. 500,- kocht Willem de botter terug van Aart.
 In 1934 besloten de broers Willem en Jacob van Triest (EB 23) van botter te ruilen, omdat de botter van Willem groter was, moest Jacob Fl. 1100,- toegeven.<br>Omdat de motor nogal eens haperde, besloot Jacob in 1938 door Marinus Zoet een nieuwe motor te laten inbouwen, een 4 cilinder Buick van 20 pk.
@@ -1129,8 +1070,9 @@ De laatste opknapbeurt van de EB 43 was in 2016/2017.</p><p>Bron: <a href="https
 <td>bouwperiode</td>
 <td>1910-1920</td>
 </tr>
-</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=502">Federatie Varend Erfgoed Nederland</a></p></section></section><section data-format="markdown" id="de-eb47"><h2 id="x8-de-eb47"><bdi class="secno">8. </bdi>De EB47</h2><p><em>De jeugdbotter</em></p><figure id="foto_eb47">
-    <img src="media/eb47.jpg" alt="EB 47" width="1100" height="340">
+</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=502">Federatie Varend Erfgoed Nederland</a></p></section></section>
+        <section data-format="markdown" id="de-eb47"><h2 id="x8-de-eb47"><bdi class="secno">8. </bdi>De EB47</h2><p><em>De jeugdbotter</em></p><figure id="foto_eb47">
+    <img src="media/eb47.jpg" alt="EB 47">
     <figcaption>Figuur <bdi class="figno">8</bdi> <span class="fig-title">EB 47</span></figcaption>
 </figure><section id="het-verhaal-van-de-eb47"><h3 id="x8-1-het-verhaal-van-de-eb47"><bdi class="secno">8.1 </bdi>Het Verhaal van de EB47</h3><p>De Botterstichting onderschrijft al jaren het belang om de jeugd bij de botters te betrekken. 
 Daarom is ook een speciale opleiding voor de jeugd in het leven geroepen. Veel jongeren hebben inmiddels hun vaardiploma’s behaald en zijn vaak op de werf te vinden.<br>Met de eigen jeugdbotter, de EB 47, wordt regelmatig geoefend en mag de jeugd, onder leiding van een ervaren schipper, vaartochten
@@ -1222,9 +1164,7 @@ voor kinderen uit groep 7 om ze bekend te maken met het visserijverleden van hun
 <td></td>
 </tr>
 </tbody></table><div class="hhulst">
-
-
-<p>Het bottertje is voor de oorlog in de crises jaren gebouwd als tijdverdrijf of hobby, men dacht 1933. Door de blokkemaker van de werf of er mee gevist of gestroopt is.......
+Het bottertje is voor de oorlog in de crises jaren gebouwd als tijdverdrijf of hobby, men dacht 1933. Door de blokkemaker van de werf of er mee gevist of gestroopt is.......
 De laatste eigenaar had een kroeg in Spakenburg en is na dat die alles verkocht had op een vrachtschip gaan wonen ligplaats Beneden-Leeuwen,ook had hij een oude sleepboot waar hij mee rondtoerde in de zomer.
 Zodoende verdaagde hij een keer in Elburg en kwam recht tegenover de werf voor de wal.
 Daar zag hij onze jeugd onder aanvoering van Arnoud Witter met allerlei punters en roeibootjes in de weer en dacht dit is iets 
@@ -1234,8 +1174,9 @@ Hij was begonnen met restaureren maar dat stagneerde, waarna hij contact met ons
 Wij op bezoek bij hem aan boord daar troffen wij de botter half onder water aan op zij van zijn schip , pomp der in en drijven. 
 Kortom de deal was gauw rond.
 Met een vlet van Pieter dacht ik, is het bottertje opgehaald naar Elburg.
-Daar is hij door Cees met behulp van vooral de jeugd gerestaureerd</p>
-</div></section></section><section data-format="markdown" id="de-eb68"><h2 id="x9-de-eb68"><bdi class="secno">9. </bdi>De EB68</h2><figure id="foto_eb68">
+Daar is hij door Cees met behulp van vooral de jeugd gerestaureerd
+</div></section></section>
+        <section data-format="markdown" id="de-eb68"><h2 id="x9-de-eb68"><bdi class="secno">9. </bdi>De EB68</h2><figure id="foto_eb68">
     <img src="media/eb68.jpg" alt="EB 68" width="1200" height="900">
     <figcaption>Figuur <bdi class="figno">9</bdi> <span class="fig-title">EB 68</span></figcaption>
 </figure><section id="het-verhaal-van-de-eb68"><h3 id="x9-1-het-verhaal-van-de-eb68"><bdi class="secno">9.1 </bdi>Het Verhaal van de EB68</h3><p>Jakobus Broekhuizen, 1899-1935, (Hannes de Spierik), zoon van Dirk Broekhuizen (EB 52) en Gerritje Saris, koopt op 1 maart 1915 de botter BU 152 van Wouter Heek in Bunschoten.
@@ -1332,13 +1273,13 @@ In 1981 werd de EB 68 verkocht aan IJsbrand Dijkstra uit Buitenhoogte, vervolgen
 <td>bouwperiode</td>
 <td>1890-1900</td>
 </tr>
-</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=92">Federatie Varend Erfgoed Nederland</a></p></section></section><section data-format="markdown" id="de-eb18-pluut"><h2 id="x10-de-eb18-pluut"><bdi class="secno">10. </bdi>De EB18 (Pluut)</h2><p><em>Geen Botter maar een Pluut</em></p><figure id="foto_eb18p">
+</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=92">Federatie Varend Erfgoed Nederland</a></p></section></section>
+        <section data-format="markdown" id="de-eb18-pluut"><h2 id="x10-de-eb18-pluut"><bdi class="secno">10. </bdi>De EB18 (Pluut)</h2><p><em>Geen Botter maar een Pluut</em></p><figure id="foto_eb18p">
     <img src="media/eb18p.jpg" alt="EB 18 (Pluut)" width="720" height="402">
     <figcaption>Figuur <bdi class="figno">10</bdi> <span class="fig-title">EB 18 (Pluut)</span></figcaption>
 </figure><div class="note" role="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="3"><span>Noot</span></div><aside class="">
-
-
-<pre><code aria-busy="false" class="hljs">Particulier bezit</code></pre></aside></div><section id="het-verhaal-van-de-eb18-pluut"><h3 id="x10-1-het-verhaal-van-de-eb18-pluut"><bdi class="secno">10.1 </bdi>Het Verhaal van de EB18 (Pluut)</h3><p><strong>Eerdere Eigenaren van de Pluut:</strong></p><p>In januari 1913 kocht de Elburger Goosen van Ommen de Pluut in Hardewijk. De Pluut was in 1895 gebouwd en kreeg het harderwijkse nummer HK15. Van Gerrit Jacob Brands. Hij stopte met vissen en emigreerde.
+    Particulier bezit
+</aside></div><section id="het-verhaal-van-de-eb18-pluut"><h3 id="x10-1-het-verhaal-van-de-eb18-pluut"><bdi class="secno">10.1 </bdi>Het Verhaal van de EB18 (Pluut)</h3><p><strong>Eerdere Eigenaren van de Pluut:</strong></p><p>In januari 1913 kocht de Elburger Goosen van Ommen de Pluut in Hardewijk. De Pluut was in 1895 gebouwd en kreeg het harderwijkse nummer HK15. Van Gerrit Jacob Brands. Hij stopte met vissen en emigreerde.
 De Pluut is gebouwd op de werf van Kuykhoven in Hardewijk. Dit was de eerste nieuwe schuit door hem gebouwd.
 De Pluut kreeg in Elburg het vacante nummer EB18 (voorheen de botter EB18) deze was verkocht aan een harderwijkse visser. Later in 1954 terug gekocht door Gerard van de Heide (botje) deze was de laatste vissende eigenaar van de pluut.
 Goossen van Ommen viste voornamelijk met zi-netten vanwege de slechte resultaten in de visserij verkocht hij de pluut in 1922 aan Coenraad Westerink (de Stootdolle) Coenraad Westerink viste 6 jaar met de Pluut.
@@ -1447,13 +1388,13 @@ In 2012 en 2013 is de pluut een grondige restauratie ondergaan waarbij bijna all
 <td>bouwperiode</td>
 <td>1890-1900</td>
 </tr>
-</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=2496">Federatie Varend Erfgoed Nederland</a></p></section></section><section data-format="markdown" id="de-eb18-botter"><h2 id="x11-de-eb18-botter"><bdi class="secno">11. </bdi>De EB18 (Botter)</h2><figure id="foto_eb18b">
+</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=2496">Federatie Varend Erfgoed Nederland</a></p></section></section>
+        <section data-format="markdown" id="de-eb18-botter"><h2 id="x11-de-eb18-botter"><bdi class="secno">11. </bdi>De EB18 (Botter)</h2><figure id="foto_eb18b">
     <img src="media/eb18p.jpg" alt="EB 18 (Botter)" width="720" height="402">
     <figcaption>Figuur <bdi class="figno">11</bdi> <span class="fig-title">EB 18 (Botter)</span></figcaption>
 </figure><div class="note" role="note" id="issue-container-generatedID-1"><div role="heading" class="note-title marker" id="h-note-1" aria-level="3"><span>Noot</span></div><aside class="">
-
-
-<pre><code aria-busy="false" class="hljs">Particulier bezit</code></pre></aside></div><section id="het-verhaal-van-de-eb18-botter"><h3 id="x11-1-het-verhaal-van-de-eb18-botter"><bdi class="secno">11.1 </bdi>Het Verhaal van de EB18 (Botter)</h3><p><strong>Geschiedenis</strong></p><p>De EB 18 is gebouwd in 1893 en heeft tot 1959 deel uitgemaakt van de vissersvloot van Harderwijk en Elburg. Het schip werd gebruikt om te vissen op haring, spiering, paling en bot.
+    Particulier bezit
+</aside></div><section id="het-verhaal-van-de-eb18-botter"><h3 id="x11-1-het-verhaal-van-de-eb18-botter"><bdi class="secno">11.1 </bdi>Het Verhaal van de EB18 (Botter)</h3><p><strong>Geschiedenis</strong></p><p>De EB 18 is gebouwd in 1893 en heeft tot 1959 deel uitgemaakt van de vissersvloot van Harderwijk en Elburg. Het schip werd gebruikt om te vissen op haring, spiering, paling en bot.
 Uiteindelijk dreigde de boter op de Purmerringvaart haar laatste rustplaats te krijgen, in 1981 is het schip weer gelicht en opnieuw in de vaart gebracht.
 Onder leiding van ervaren bemanning kunt u een zeiltocht maken met de EB18, voor een fantastische ervaring .Door de botter te huren draagt u een steentje bij aan de instandhouding van dit varende monument</p><p>Heb je meer over de historie, vul het aan!</p></section><section id="de-gegevens-van-de-eb18-botter"><h3 id="x11-2-de-gegevens-van-de-eb18-botter"><bdi class="secno">11.2 </bdi>De Gegevens van de EB18 (Botter)</h3><table>
 <thead>
@@ -1538,13 +1479,13 @@ Onder leiding van ervaren bemanning kunt u een zeiltocht maken met de EB18, voor
 <td>bouwperiode</td>
 <td>1890-1900</td>
 </tr>
-</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=191">Federatie Varend Erfgoed Nederland</a></p></section></section><section data-format="markdown" id="de-eb46"><h2 id="x12-de-eb46"><bdi class="secno">12. </bdi>De EB46</h2><figure id="foto_eb46">
+</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=191">Federatie Varend Erfgoed Nederland</a></p></section></section>
+        <section data-format="markdown" id="de-eb46"><h2 id="x12-de-eb46"><bdi class="secno">12. </bdi>De EB46</h2><figure id="foto_eb46">
     <img src="media/eb46.jpg" alt="EB 46" width="512" height="341">
     <figcaption>Figuur <bdi class="figno">12</bdi> <span class="fig-title">EB 46</span></figcaption>
 </figure><div class="note" role="note" id="issue-container-generatedID-2"><div role="heading" class="note-title marker" id="h-note-2" aria-level="3"><span>Noot</span></div><aside class="">
-
-
-<pre><code aria-busy="false" class="hljs">Particulier bezit</code></pre></aside></div><section id="het-verhaal-van-de-eb46"><h3 id="x12-1-het-verhaal-van-de-eb46"><bdi class="secno">12.1 </bdi>Het Verhaal van de EB46</h3><p>Van deze botter is weinig op internet te vinden over de historie. Maar wie weet zijn er mensen die aanvullingen kunnen geven.</p><p>Bouwjaar is ongeveer 1942
+    Particulier bezit
+</aside></div><section id="het-verhaal-van-de-eb46"><h3 id="x12-1-het-verhaal-van-de-eb46"><bdi class="secno">12.1 </bdi>Het Verhaal van de EB46</h3><p>Van deze botter is weinig op internet te vinden over de historie. Maar wie weet zijn er mensen die aanvullingen kunnen geven.</p><p>Bouwjaar is ongeveer 1942
 Gevist van 1942 - 1961
 Vanaf 1961 als recreatie in gebruik.
 Vanaf 1990 weer in Elburg.</p></section><section id="de-gegevens-van-de-eb46"><h3 id="x12-2-de-gegevens-van-de-eb46"><bdi class="secno">12.2 </bdi>De Gegevens van de EB46</h3><table>
@@ -1630,13 +1571,13 @@ Vanaf 1990 weer in Elburg.</p></section><section id="de-gegevens-van-de-eb46"><h
 <td>bouwperiode</td>
 <td>1890-1900</td>
 </tr>
-</tbody></table><p>Bron: <a href="https://www.botterbehoud.nl/">Website Botterbehoud Nederland</a></p></section></section><section data-format="markdown" id="de-eb65"><h2 id="x13-de-eb65"><bdi class="secno">13. </bdi>De EB65</h2><figure id="foto_eb65">
+</tbody></table><p>Bron: <a href="https://www.botterbehoud.nl/">Website Botterbehoud Nederland</a></p></section></section>
+        <section data-format="markdown" id="de-eb65"><h2 id="x13-de-eb65"><bdi class="secno">13. </bdi>De EB65</h2><figure id="foto_eb65">
     <img src="media/eb65.jpg" alt="EB 65" width="1024" height="678">
     <figcaption>Figuur <bdi class="figno">13</bdi> <span class="fig-title">EB 65</span></figcaption>
 </figure><div class="note" role="note" id="issue-container-generatedID-3"><div role="heading" class="note-title marker" id="h-note-3" aria-level="3"><span>Noot</span></div><aside class="">
-
-
-<pre><code aria-busy="false" class="hljs">Particulier bezit</code></pre></aside></div><section id="het-verhaal-van-de-eb65"><h3 id="x13-1-het-verhaal-van-de-eb65"><bdi class="secno">13.1 </bdi>Het Verhaal van de EB65</h3><p><em>Zeilen is mijn vak,&nbsp;Zeilen is mijn leven,&nbsp;Had ik geld genoeg gehad,&nbsp;dan was ik thuis gebleven.&nbsp;(Deze tekst is te vinden op het deurtje van het vooronder.)</em></p><table>
+    Particulier bezit
+</aside></div><section id="het-verhaal-van-de-eb65"><h3 id="x13-1-het-verhaal-van-de-eb65"><bdi class="secno">13.1 </bdi>Het Verhaal van de EB65</h3><p><em>Zeilen is mijn vak,&nbsp;Zeilen is mijn leven,&nbsp;Had ik geld genoeg gehad,&nbsp;dan was ik thuis gebleven.&nbsp;(Deze tekst is te vinden op het deurtje van het vooronder.)</em></p><table>
 <thead>
 <tr>
 <th>Naam</th>
@@ -1786,13 +1727,15 @@ Vanaf 1990 weer in Elburg.</p></section><section id="de-gegevens-van-de-eb46"><h
 <td>1900-1910</td>
 </tr>
 </tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=3591">Federatie Varend Erfgoed Nederland</a></p><div class="note" role="note" id="issue-container-generatedID-4"><div role="heading" class="note-title marker" id="h-note-4" aria-level="4"><span>Noot</span></div><aside class="">
-
-
-<pre><code aria-busy="false" class="hljs javascript">*) Op de site van RVEN staat dat materiaal <span class="hljs-string">'ijzer'</span> is en de boowwijze  
-   van de romp <span class="hljs-string">'geklonken'</span> dit klopt niet (red)</code></pre></aside></div></section></section><section data-format="markdown" id="de-bruiser"><h2 id="x14-de-bruiser"><bdi class="secno">14. </bdi>De Bruiser</h2><figure id="foto_bruiser">
+    *) Op de site van RVEN staat dat materiaal 'ijzer' is en de boowwijze  
+       van de romp 'geklonken' dit klopt niet (red)
+</aside></div></section></section>
+        <section data-format="markdown" id="de-bruiser"><h2 id="x14-de-bruiser"><bdi class="secno">14. </bdi>De Bruiser</h2><figure id="foto_bruiser">
     <img src="media/bruiser.jpg" alt="Bruiser" width="896" height="998">
     <figcaption>Figuur <bdi class="figno">14</bdi> <span class="fig-title">Bruiser</span></figcaption>
-</figure><section id="het-verhaal-van-de-bruiser"><h3 id="x14-1-het-verhaal-van-de-bruiser"><bdi class="secno">14.1 </bdi>Het Verhaal van de Bruiser</h3><p>De&nbsp;botter&nbsp;'Bruiser' is in 1917 gebouwd door Klaas de Haas in Monnickendam als Jachtbotter voor&nbsp;professor Rein Kuyper uit Amsterdam.&nbsp;De&nbsp;botter&nbsp;speelt een centrale rol in&nbsp;het boek "Zwervend langs het IJsselmeer" van zoon en schrijver Wim Kuyper. Met de 'Bruiser' maakte Wim de vele tochten op het IJsselmeer. De ervaringen en waarnemingen die hij daarbij (op)deed, staan als een historisch document, uitvoerig beschreven in zijn boek. Klaas de Haas deed in in Durgerdam, in de tijd van de fam. Kuyper ook het onderhoud aan de&nbsp;botter. Het schip is nog nagenoeg in originele staat. De huidige eigenaar vaart sinds 1978 met de&nbsp;botter.&nbsp;&nbsp;</p><p>Het botterjacht Bruiser viert zijn eeuwfeest, en eigenaar Henk Hulst, medeoprichter van de botterstichting Elburg, heeft haar veertig jaar in bezit. Hij kocht het schip ooit omdat zijn vrouw niet op een "echte"&nbsp;botter&nbsp;uit de visserij wilde stappen - dat stonk teveel naar vis en teer. Na een rijk leven zet Hulst (76) de Bruiser nu in als motorjacht.
+</figure><div class="note" role="note" id="issue-container-generatedID-5"><div role="heading" class="note-title marker" id="h-note-5" aria-level="3"><span>Noot</span></div><aside class="">
+    Particulier bezit
+</aside></div><section id="het-verhaal-van-de-bruiser"><h3 id="x14-1-het-verhaal-van-de-bruiser"><bdi class="secno">14.1 </bdi>Het Verhaal van de Bruiser</h3><p>De&nbsp;botter&nbsp;'Bruiser' is in 1917 gebouwd door Klaas de Haas in Monnickendam als Jachtbotter voor&nbsp;professor Rein Kuyper uit Amsterdam.&nbsp;De&nbsp;botter&nbsp;speelt een centrale rol in&nbsp;het boek "Zwervend langs het IJsselmeer" van zoon en schrijver Wim Kuyper. Met de 'Bruiser' maakte Wim de vele tochten op het IJsselmeer. De ervaringen en waarnemingen die hij daarbij (op)deed, staan als een historisch document, uitvoerig beschreven in zijn boek. Klaas de Haas deed in in Durgerdam, in de tijd van de fam. Kuyper ook het onderhoud aan de&nbsp;botter. Het schip is nog nagenoeg in originele staat. De huidige eigenaar vaart sinds 1978 met de&nbsp;botter.&nbsp;&nbsp;</p><p>Het botterjacht Bruiser viert zijn eeuwfeest, en eigenaar Henk Hulst, medeoprichter van de botterstichting Elburg, heeft haar veertig jaar in bezit. Hij kocht het schip ooit omdat zijn vrouw niet op een "echte"&nbsp;botter&nbsp;uit de visserij wilde stappen - dat stonk teveel naar vis en teer. Na een rijk leven zet Hulst (76) de Bruiser nu in als motorjacht.
 In het standaardwerk De&nbsp;Botter&nbsp;schrijft J. van Beylen dat jachtlui natuurlijk andere opvattingen over bouw en gebruik van hun schepen hadden dan vissers. Zo was er de voorkeur voor een kajuit. De Bruiser is wel volgens&nbsp;botter-maten gebouwd: 11,95 meter lang en 3,66 breed, maar met een kajuit.
 De Bruiser werd in 1917 op stapel gezet door De Haas in Monnikendam voor prof. Rein Kuyper uit Amsterdam die haar in 1918 in de vaart nam. Het botterjacht behield altijd de oorspronkelijke naam, toen het eerst in 1934 aan Jonkman werd verkocht en in 1947 aan H. Rolman uit Soest. Na een paar jaar verkocht die het jacht aan de familie Doodeheefer die het in 1964 doorverkocht aan prof. dr. J.R. Blickman uit Groningen. Toen de Bruiser in 1978 bij Stofberg te koop stond kocht Hulst de&nbsp;botter. Het schip is ingeschreven bij de SSRP (Stichting Stamboek Rond- en Platbodemjachten) plaquette numIn het standaardwerk De&nbsp;Botter&nbsp;schrijft J. van Beylen dat jachtlui natuurlijk andere opvattingen over bouw en gebruik van hun schepen hadden dan vissers. Zo was er de voorkeur voor een kajuit. De Bruiser is wel volgens&nbsp;botter-maten gebouwd: 11,95 meter lang en 3,66 breed, maar met een kajuit. Nadat Henk Hulst mede de Elburger botterstichting had opgericht zocht hij een schip om samen met zijn vrouw te kunnen zeilen. Die had niets met botters. De EB24, de eerste&nbsp;botter&nbsp;van de stichting en rechtstreeks uit de visserij, stonk nog naar vis en teer in die tijd. Maar via een advertentie zag Hulst een botterjacht te koop liggen bij Stofberg. Hulst kreeg de&nbsp;botter&nbsp;te zien en was op slag verliefd, vooral op de teakhouten opbouw. 'Vroeger was die van grenen,' vertelt Hulst. De Bruiser werd in 1917 op stapel gezet door De Haas in Monnikendam voor prof. Rein Kuyper uit Amsterdam die haar in 1918 in de vaart nam. Het botterjacht behield altijd de oorspronkelijke naam, toen het eerst in 1934 aan Jonkman werd verkocht en in 1947 aan H. Rolman uit Soest. Na een paar jaar verkocht die het jacht aan de familie Doodeheefer die het in 1964 doorverkocht aan prof. dr. J.R. Blickman uit Groningen. Toen de Bruiser in 1978 bij Stofberg te koop stond kocht Hulst de&nbsp;botter. Het schip is ingeschreven bij de SSRP (Stichting Stamboek Rond- en Platbodemjachten) plaquette nummer 353 met zeilnummer VB2 en nagenoeg in originele staat en een gemeentelijk monument voor Elburg met nummer GM263. Wim Kuyper, de zoon van Rein, schreef een boek geïnspireerd door de zeiltochten in zijn jongere jaren.&nbsp;"Zwervend langs het IJsselmeer (1978)"&nbsp;geeft een mooi beeld van de overgang van Zuiderzee naar IJsselmeer.</p><p>1978: Herinneringen van Wim Kuyper in zijn boek "Zwervend langs het IJsselmeer"</p><p>In zijn boek "Zwervend langs het IJsselmeer" schrijft Wim Kuyper het volgende:
 Het hellingen van de 'Bruiser' herinner ik mij nog goed;&nbsp;het schip werd in het verlengde van&nbsp;de langshelling van de Haas in Durgerdam&nbsp;gebracht en de slede precies in het midden onder het&nbsp;vlak&nbsp;van het schip geschoven. De mannen waren dan met een&nbsp;vlot en een 'bakkie' waarin meestal wat water stond, druk&nbsp;in de weer om de slee met touwen op haar plaats aan het&nbsp;schip vast te binden.&nbsp;Aan het einde van de helling stond de kaapstander&nbsp;waarmede de kabel van de slee-talie werd aangetrokken.&nbsp;Twee palen werden door de kaapstander gestoken en met&nbsp;behulp van een rondlopend, geblinddoekt paard werd de&nbsp;'Bruiser' omhoog gedraaid. De paardeboer Kees Pauwels&nbsp;had altijd hetzelfde paard voor de werf beschikbaar; het&nbsp;was geen jonkie en ook geen draver. Het paard had het&nbsp;niet gemakkelijk wanneer zware schepen omhoog gedraaid&nbsp;moesten worden; de warme dampen stegen dan van zijn&nbsp;huid omhoog en soms moesten enkele mannen meehelpen</p></section><section id="de-gegevens-van-de-bruiser"><h3 id="x14-2-de-gegevens-van-de-bruiser"><bdi class="secno">14.2 </bdi>De Gegevens van de Bruiser</h3><table>
@@ -1878,7 +1821,8 @@ Het hellingen van de 'Bruiser' herinner ik mij nog goed;&nbsp;het schip werd in 
 <td>bouwperiode</td>
 <td>1910-1920</td>
 </tr>
-</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=1666">Federatie Varend Erfgoed Nederland</a></p></section></section><section id="tof"><h2 id="x15-lijst-met-figuren"><bdi class="secno">15. </bdi>Lijst met figuren</h2><ul class="tof">
+</tbody></table><p>Bron: <a href="https://rven.info/schip.aspx?=1666">Federatie Varend Erfgoed Nederland</a></p></section></section>
+        <section id="tof"><h2 id="x15-lijst-met-figuren"><bdi class="secno">15. </bdi>Lijst met figuren</h2><ul class="tof">
         <li class="tofline">
     <a class="tocxref" href="#foto_eb1">Figuur <bdi class="figno">1</bdi> <span class="fig-title">EB 1</span></a>
   </li><li class="tofline">
@@ -1908,6 +1852,115 @@ Het hellingen van de 'Bruiser' herinner ik mij nog goed;&nbsp;het schip werd in 
   </li><li class="tofline">
     <a class="tocxref" href="#foto_bruiser">Figuur <bdi class="figno">14</bdi> <span class="fig-title">Bruiser</span></a>
   </li>
-      </ul></section><p role="navigation" id="back-to-top">
+      </ul></section>
+    
+<p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
-  </p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+  </p><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respecIsReady) {
+  document.respecIsReady.then(dfnPanel);
+} else {
+  dfnPanel();
+}
+
+function dfnPanel() {
+  /** @type {HTMLElement} */
+  let panel;
+  document.body.addEventListener("click", event => {
+    if (!(event.target instanceof HTMLElement)) return;
+
+    /** @type {HTMLElement} */
+    const el = event.target;
+
+    const action = deriveAction(el);
+    switch (action) {
+      case "show": {
+        if (panel) hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = el.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        displayPanel(dfn, panel, { x: event.clientX, y: event.clientY });
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        break;
+      }
+    }
+  });
+}
+
+/** @param {HTMLElement} clickTarget */
+function deriveAction(clickTarget) {
+  const hitALink = !!clickTarget.closest("a");
+  if (clickTarget.closest("dfn, .index-term")) {
+    return hitALink ? null : "show";
+  }
+  if (clickTarget.closest(".dfn-panel")) {
+    if (hitALink) {
+      const clickedSelfLink = clickTarget.classList.contains("self-link");
+      return clickedSelfLink ? "hide" : "dock";
+    }
+    const panel = clickTarget.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : null;
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return null;
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
